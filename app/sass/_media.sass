@@ -7,16 +7,23 @@ $output-bourbon-deprecation-warnings: false;
 		.slick-list
 			overflow: hidden
 
+	.main-slider__slide-title
+		font-size: 3rem
+		line-height: 3.6rem
+
 @media screen and (max-width: 1500px)
 
 	.main-slider__slide
 		img 
-			min-height: 100vh
+			// min-height: 100vh 
 			object-fit: cover 
 			object-position: center
 
 	.header-slider
 		margin-right: 75px
+
+	.help
+		bottom: 4.35714%
 
 @media screen and (max-width: 1400px)
 	.main-slider__slide-title
@@ -150,9 +157,12 @@ $output-bourbon-deprecation-warnings: false;
 	// 	position: relative
 	// 	bottom: 0 !important
 
-	.main-slider__slide-title
-		font-size: 2rem
-		line-height: 1
+	.search
+		display: none !important
+
+	// .main-slider__slide-title
+	// 	font-size: 2rem
+	// 	line-height: 1
 
 	.main-slider__slide img
 		min-height: calc(100vh - 20vh)
@@ -350,7 +360,6 @@ $output-bourbon-deprecation-warnings: false;
 	.main-slider__slide-title-cont
 		// margin-top: 35px
 	.help
-		bottom: 10px
 		&__item
 			padding: 15px 0 15px 55px
 			font-size: 1rem
@@ -361,7 +370,8 @@ $output-bourbon-deprecation-warnings: false;
 				margin-right: 35px
 	.main-slider .slick-dots
 		right: 2rem
-		bottom: 20px
+		bottom: 4.35714%
+
 	.main-slider__slide-btn
 		margin-top: 15px
 
@@ -670,6 +680,9 @@ $output-bourbon-deprecation-warnings: false;
 
 
 @media screen and (max-width: 667px)
+
+	.head-special-cont
+		display: none
 
 
 	html 

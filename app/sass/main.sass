@@ -5,9 +5,13 @@ $output-bourbon-deprecation-warnings: false
 @import "functions"
 
 @import "_registration.sass"
+@import "_admin.sass"
 
 *[v-cloak]
 	display: none
+
+
+
 
 .header-special__link
 	cursor: pointer
@@ -20,11 +24,6 @@ $output-bourbon-deprecation-warnings: false
 		padding: 20px 0
 		text-align: right
 		color: #fff
-
-
-
-
-
 
 .standart-slider
 	position: relative
@@ -288,6 +287,42 @@ $output-bourbon-deprecation-warnings: false
 	right: 0
 	z-index: 40
 
+	&-top.new
+		background: #fff
+		color: #000
+		border-bottom-color: #a8abb0
+
+		.wrapper
+			align-items: center
+
+		.head
+			&-links
+				justify-content: flex-end
+
+			&-special
+				&__top
+					color: #000
+
+		.main-logo a
+			color: #000
+
+	&-bot.new
+		background: #fff
+		color: #000
+
+
+		.head-bot__right
+			width: 100%
+
+		.wrapper 
+			justify-content: flex-end
+
+		.search
+			margin-left: 20px
+
+			a
+				filter: invert(1)
+
 	.search
 		display: flex 
 		margin-left: auto
@@ -339,6 +374,9 @@ $output-bourbon-deprecation-warnings: false
 .ico-search
 	background: url('../img/ico-zoom.png') no-repeat center top 10px
 .inner
+	.head-special__top
+		color: #000
+
 	.ico-search
 		background: url('../img/ico-zoom-black.png') no-repeat center
 	.head
