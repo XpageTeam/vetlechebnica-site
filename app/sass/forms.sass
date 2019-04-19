@@ -1,0 +1,311 @@
+$output-bourbon-deprecation-warnings: false;
+@import "bourbon"
+@import "vars"
+
+@function persent($px, $base: $base-width)
+	@return $px/$base*100 + %
+
+@function vw($px, $base: 1920)
+	@return $px/$base*100 + vw
+
+@function vh($px, $base: 972)
+	@return $px/$base*100 + vh
+
+$main-color: #31c5bd
+$border-color: #e4e8ea
+$error-color: #ff0024
+
+.fancybox-close
+	background: url(../img/ico-close.svg) no-repeat center
+
+.fancybox
+	
+	&-skin
+		border-radius: 0
+
+	&-close
+		+size(30px)
+		position: absolute
+		top: 50px
+		right: 55px
+		text-decoration: none
+		display: flex
+		align-items: center
+		justify-content: center
+
+		&:after
+			//content: "+"
+			color: #000
+			font-weight: 300
+			font-size: 40px
+			display: block
+			transform: rotate(45deg)
+
+.forms__input_error
+	
+	~ .forms__error-message
+		display: block
+
+.forms
+	display: none
+	box-sizing: border-box
+	padding: 1.4rem
+	background: #fff
+
+	&__title
+		font-size: rem(30)
+		text-align: left
+		font-weight: bold
+		margin-bottom: 24px
+		color: #000
+	
+	&-header
+		border-bottom: 1px solid $border-color
+
+	&-text-cont
+		display: flex
+		justify-content: flex-start
+		font-size: rem(14)
+		line-height: rem(25)
+		letter-spasing: 0.04rem
+		margin-bottom: 44px
+
+	&__text
+		// margin: vh(25) 0
+		max-width: 540px
+		text-align: left
+		font-size: rem(14)
+		line-height: rem(20)
+
+	&-wrap
+		display: flex
+		flex-wrap: wrap
+
+		&--bot
+			display: flex
+			align-items: center
+
+	&-input-cont
+		display: flex
+		flex-direction: column-reverse
+		box-sizing: border-box
+		width: 47.2%
+		min-width: 10px
+		position: relative
+		margin-bottom: vh(30)
+
+		&--file, &--textarea
+			width: 100%
+			padding: 0 !important
+
+		&--file
+			position: relative
+
+	&__input
+		box-sizing: border-box
+		+size(100% 49px)
+		border: 1px solid $border-color
+		border-radius: 1px
+		padding: 0 vw(17)
+		outline: none
+
+		&_error
+			border-color: $error-color
+
+			+ .forms__checkbox-label
+				color: $error-color
+
+		&[required] + .forms__label:after
+			content: "*"
+			color: $main-color
+
+		&--select
+			-webkit-appearance: none
+			background: url("../img/ico-arrow-select.svg") center right 15px no-repeat, #fff
+
+			color: #000
+
+		&--file
+			display: none
+
+			&-support
+				width: 77.34%
+
+		&--textarea
+			max-width: 100%
+			height: vh(142)
+			padding:
+				top: 5px
+				bottom: 5px
+
+	&__file-formats
+		order: -1
+		margin-top: vh(15)
+		font-size: rem(14)
+		color: #777777
+
+	&__label
+		margin-bottom: vh(18)
+
+		&--file
+			order: 1
+			pointer-events: none
+
+			&:before
+				content: attr(data-btn-text)
+				position: absolute
+				pointer-events: all
+				background: url("../img/ico-view.png") center left 15px no-repeat, #f4f4f4
+				right: 0
+				top: 33px
+				cursor: pointer
+				+size(18.57% 49px)
+				text-align: right
+				line-height: 49px
+				box-sizing: border-box
+				padding-right: vw(16)
+
+	&-checkbox
+		position: relative
+
+		&:before
+			content: ""
+			position: absolute
+			top: 3px
+			left: 0
+			+size(23px)
+			border: 1px solid $border-color
+			border-radius: 1px
+			background: #fff
+
+	&__checkbox
+		opacity: 0
+		position: absolute
+
+		&:checked + label
+
+			&:before, &:after
+				opacity: 1
+		
+		&-label
+			font-size: rem(14)
+			line-height: rem(20)
+			padding-left: 45px
+			cursor: pointer
+			height: 32px
+			display: flex
+			span 
+				align-self: center
+
+			&:before, &:after
+				content: ""
+				position: absolute
+				background: $main-color
+				transition: opacity .5s ease
+				opacity: 0
+
+			&:before
+				+size(10px 2px)
+				top: 11px
+				left: 5px
+				transform-origin: left
+				transform: rotate(45deg)
+
+			&:after
+				+size(10px 2px)
+				top: 11px
+				left: 8px
+				transform-origin: right
+				transform: rotate(-45deg)
+
+	&__req-text
+		text-align: right
+
+		&:before
+			content: "* "
+			color: red
+			font-size: rem(14)
+
+	&-submit-cont
+		display: flex
+		justify-content: flex-start
+		margin-top: vh(43)
+
+	&__submit
+		color: #fff
+		border: 0
+		cursor: pointer
+		background: #27b0a8
+		font-size: rem(16)
+		padding: vh(13) vw(40)
+		border-radius: 35px
+		margin-left: 0
+
+	&__error
+
+		&-message
+			border: 1px solid #d4d4d4
+			background: #fff
+			color: #000
+			padding: 7px 10px
+			border-radius: 7px
+			position: absolute
+			bottom: 45px
+			right: -6px
+			box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.1)
+			display: none
+
+			&:after
+				content: ""
+				background: url("../img/error-triangle.png") no-repeat
+				position: absolute
+				top: calc(100% - 0px)
+				right: 19px
+				+size(15px 8px)
+
+			&--file
+				bottom: initial
+				right: 21%
+				top: 0
+
+			&-icon
+				display: block
+				border-radius: 50%
+				position: absolute
+				border: 1px solid $error-color
+				+size(19px)
+				background: #fff
+				bottom: -32px
+				right: 16px
+
+				&:after, &:before
+					content: ""
+					position: absolute
+					width: 1px
+					background: $error-color
+					left: calc(50% - 1px)
+
+				&:before
+					top: 4px
+					height: 8px
+
+				&:after
+					bottom: 4px
+					height: 2px
+
+
+
+// @media screen and (max-width: 1000px)
+	
+
+@media screen and (max-width: 767px)
+	.fancybox-close
+		right: 10px
+		top: 10px
+
+@media screen and (max-width: 667px)
+	.forms__title
+		margin-bottom: 15px
+
+	
+// @media screen and (max-width: 480px)

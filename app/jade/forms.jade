@@ -1,0 +1,32 @@
+html
+	head
+		meta(charset="utf-8")
+		title Формы
+		include inc/head.jade
+		include inc/css.jade
+	body.inner
+		#page-wr
+			#content
+				include inc/header-inner.jade
+				.content
+					.inner-cont
+						.title-block__cont
+							.wrapper
+								.titile-block
+									.title-block__crumbs
+										.bread-crumbs
+											a.bread-crumbs__link(href="#") Главная
+											a.bread-crumbs__link(href="#") Личный кабинет
+											h1.title-block__title Формы
+
+
+					.wrapper
+						.cart__cont
+							.form-list
+								a.btn.fancybox(@click="showShopPopup" href="#appointment" style="color: #000") Запись на прием
+								a.btn.fancybox(href="#consultation" style="color: #000") Запрос на консультацию
+
+
+
+			include inc/footer.jade
+		include inc/scripts.jade

@@ -1,0 +1,30 @@
+html
+	head
+		meta(charset="utf-8")
+		title Сотрудники
+		include inc/head.jade
+		include inc/css.jade
+	body.inner
+		#page-wr
+			.mobile-menu
+			#content
+				include inc/header-inner.jade
+				include inc/breadcrambs.jade
+				.content
+					.wrapper 
+						section.personal
+							.personal__list
+								- for (var i = 1; i <= 14; i++ )
+									a.personal__item.fancybox(href="#")
+										div
+											figure.personal__img
+												img(src="img/photos/personal.jpg", alt="")
+											.personal__info
+												.personal__name Кузовлев<br> Дмитрий Николаевич
+												.personal__prof хирург, заведующий хирургического кабинета
+
+
+						include inc/paginator.jade
+
+			include inc/footer.jade
+		include inc/scripts.jade

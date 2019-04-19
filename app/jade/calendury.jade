@@ -1,0 +1,141 @@
+html
+	head
+		meta(charset="utf-8")
+		title Расписание
+		include inc/head.jade
+		include inc/css.jade
+	body.inner
+		#page-wr
+			.mobile-menu
+			#content
+				include inc/header-inner.jade
+				include inc/breadcrambs.jade
+				.content
+					.wrapper 
+						section.timing
+							.timing__filter
+								.forms-input-cont
+									select.forms__input.forms__input--select(required='', name='', id='')
+										option(value='') УВЛ Курчатовского районов
+									label.forms__label Выберите клинику:
+									.forms__error-message
+										i.forms__error-message-icon
+								.forms-input-cont
+									select.forms__input.forms__input--select(required='', name='', id='')
+										option(value='') Рентген
+									label.forms__label Выберите услугу
+									.forms__error-message
+										i.forms__error-message-icon
+							.times
+								.times-col.times-col__fix
+									.time-block
+									.time-block 08.00 - 09.00
+									.time-block 09.00 - 10.00
+									.time-block 10.00 - 11.00
+									.time-block 11.00 - 12.00
+									.time-block 12.00 - 13.00
+									.time-block 13.00 - 14.00
+									.time-block 14.00 - 15.00
+									.time-block 15.00 - 16.00
+								.times__slider
+									.times-col
+										.time-block Понедельник
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block.time-block--request <div>Запись</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block.time-block--output <div>Редактировать</div>
+									.times-col
+										.time-block Вторник
+										.time-block.time-block--free <div>Редактироват</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Среда
+										.time-block <div></div>
+										.time-block.time-block--busy <div>Редактироват</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Четверг
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block.time-block--entry <div>Редактироват</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Пятница
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Суббота
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Воскресенье
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Понедельник
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block.time-block--request <div>Редактироват</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block.time-block--output <div>Редактироват</div>
+							.status
+								.status__list
+									.status__item
+										.ico-color.time-block--free 
+										| Свободно
+									.status__item
+										.ico-color.time-block--busy 
+										| Занято
+									.status__item
+										.ico-color.time-block--entry 
+										| Нет записи
+									.status__item
+										.ico-color.time-block--request 
+										| Заявка
+									.status__item
+										.ico-color.time-block--output 
+										| Выходной
+
+
+			include inc/footer.jade
+		include inc/scripts.jade

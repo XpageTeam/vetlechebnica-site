@@ -1,0 +1,253 @@
+html
+	head
+		meta(charset="utf-8")
+		title Расписание
+		include inc/head.jade
+		include inc/css.jade
+	body.inner
+		#page-wr
+			.mobile-menu
+			#content
+				include inc/header-inner.jade
+				include inc/breadcrambs.jade
+				.content
+					.wrapper 
+						section.registration
+							//.registration__filter
+								form(action="")
+									.registration
+										.registration-top
+											.forms-input-cont
+												select.forms__input.forms__input--select(required='', name='', id='')
+													option(value='') Август
+											.registration-top__arrow
+												
+										.registration-bot
+											.registration-list
+												- var title = ["пн", "вт", "ср", "чт", "пт", "сб", "вс", "пн", "вт", "ср", "чт", "пт", "сб", "вс", "пн", "вт", "ср", "чт", "пт", "сб", "вс", "пн", "вт", "ср", "чт", "пт", "сб", "вс", "пн", "вт", "ср", "чт"]
+													- for (var i = 1; i < 32; i++)
+														a(href="#").registration-item
+															span=title[i]
+															span=i	
+							//.times
+								.times-col.times-col__fix
+									.time-block
+									.time-block
+									.time-block 10:00
+									.time-block 12:00
+									.time-block 14.00
+									.time-block 16.00
+									.time-block 18.00
+								.times__slider
+									.times-col
+										.time-block Штеер А.С.
+										.time-block <div>Хирургия</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block.time-block--request <div>Запись</div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Полосков И.Н.
+										.time-block <div>Терапия</div>
+										.time-block.time-block--free <div>Редактироват</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Антошкин А.Н.
+										.time-block <div>Скорая помощь</div>
+										.time-block.time-block--busy <div>Редактироват</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Антошкин Е.А.
+										.time-block <div>Хирургия</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block.time-block--entry <div>Редактироват</div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Ашихмина Е.В.
+										.time-block <div>Терапия</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Беспалова Н.И.
+										.time-block <div>Скорая помощь</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Дорохова А.П.
+										.time-block <div>Хирургия</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Антошкин А.Н.
+										.time-block <div>Скорая помощь</div>
+										.time-block.time-block--busy <div>Редактироват</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block <div></div>
+									.times-col
+										.time-block Антошкин Е.А.
+										.time-block <div>Хирургия</div>
+										.time-block <div></div>
+										.time-block <div></div>
+										.time-block.time-block--entry <div>Редактироват</div>
+										.time-block <div></div>
+										.time-block <div></div>
+
+							.main-content__calendar
+								.calendar
+									.calendar__top
+										.calendar__top-months
+											select.calendar-select
+												option(value="1") Август
+												option(value="2") Август
+												option(value="3") Август
+												option(value="4") Август
+										.calendar__top-arrows
+											button.calendar-arrow.calendar-arrow--prev
+											button.calendar-arrow.calendar-arrow--next
+									.calendar__middle
+										.calendar-grid.calendar-grid--inline
+											table
+												thead
+													tr
+														each day, i in ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс", "Пн", "Вт", "Ср",]
+															if (i < 7)
+																th.past
+																	span=day
+															else
+																th
+																	span=day
+												tbody
+													tr
+														- for (let i = 1; i <= 31; i++)
+															if (i <= 7)
+																td.past
+																	span=i
+															else
+																if (i == 8)
+																	td.selected-day
+																		span=i
+																else if (i == 15)
+																	td.highlighted-day
+																		span=i
+																else
+																	td
+																		span=i
+							.main-content__table
+								.desktop-table
+									.desktop-table__head
+										table
+											thead
+												tr
+													th
+													th Штеер А.С.
+													th Полосков И.Н. 
+													th Антошкин А.Н.
+													th Антошкина Е.А.
+													th Ашихмина Е. В.
+													th Беспалова Н.И.
+													th Дорохова А.П.
+													th Дорохова А.П.
+												tr
+													th
+													th Хирургия
+													th Хирургия
+													th Хирургия
+													th Хирургия
+													th Хирургия
+													th Хирургия
+													th Хирургия
+													th Хирургия
+									.desktop-table__main
+										table
+											tbody
+												tr
+													td.desktop-table__time
+														span 10:00
+													td
+													td
+													td.desktop-table__time--on
+														div Записаться
+													td.desktop-table__time--off
+													td
+													td
+													td
+													td
+												tr
+													td.desktop-table__time
+														span 12:00
+													td
+													td.
+													td
+													td
+													td
+													td
+													td
+													td
+												tr
+													td.desktop-table__time
+														span 14:00
+													td 
+													td 
+													td 
+													td
+													td 
+													td 
+													td 
+													td 
+												tr
+													td.desktop-table__time
+														span 16:00
+													td 
+													td 
+													td
+													td 
+													td 
+													td 
+													td 
+													td 
+												tr
+													td.desktop-table__time
+														span 18:00
+													td 
+													td 
+													td
+													td 
+													td 
+													td 
+													td 
+													td 
+												
+									
+							.status
+								.status__list
+									.status__item
+										.ico-color.time-block--free 
+										| Записаться
+									.status__item
+										.ico-color.time-block--busy 
+										| Занято
+									
+
+
+			include inc/footer.jade
+		include inc/scripts.jade

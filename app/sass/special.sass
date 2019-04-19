@@ -1,0 +1,970 @@
+$output-bourbon-deprecation-warnings: false
+@import "bourbon"
+@import "functions"
+
+
+body
+	line-height: 1.3 !important
+
+.forms
+	&__title
+		font-size: rem(20)
+		margin-bottom: 20px
+		font-weight: bold
+
+	&-text-cont
+		font-size: rem(16)
+
+	&-wrap
+		display: flex 
+		flex-wrap: wrap
+		margin: 30px 0 30px -30px
+
+	&-input-cont
+		display: flex
+		flex-direction: column-reverse
+		width: calc((100% - 30px * 2) / 2)
+		margin: 0 0 30px 30px
+
+		&--textarea
+			textarea
+				width: 100% !important
+				max-width: 100%  !important
+				min-width: 100% !important
+
+	&__input
+		height: 45px
+		border: 2px solid #000
+		padding: 0 10px
+
+	&__label
+		margin-bottom: 5px
+
+
+
+	&__submit
+		width: 200px
+		height: 60px
+		display: block
+		background: #000
+		color: #fff
+		font-size: 1rem
+		border: 0
+		cursor: pointer
+
+	&-submit
+		&-cont
+			margin-top: 30px
+
+		&-info
+			margin-top: 20px
+
+
+
+
+
+.bread-crumbs__link
+	position: relative
+
+
+	&:after 
+		content: ''
+		display: inline-block
+		+size(8px)
+		border:
+			top: 1px solid currentColor
+			right: 1px solid currentColor
+		transform: rotate(45deg)
+		margin: 0 5px
+
+.access
+	font-size: 17px
+	color: #000
+	display: flex 
+	align-items: center
+	
+	width: 100%
+	z-index: 1000
+
+
+.special
+	margin-left: auto
+
+a 
+	cursor: pointer
+	color: currentColor
+* 
+	text-decoration: none
+	transform: none
+	box-sizing: border-box
+
+div[style^="background-"]
+	background-image: none !important
+
+li 
+	list-style: none
+
+.a-fontsize
+	display: flex
+	align-items: center
+
+	dt
+		margin-right: 10px
+
+	a
+		text-decoration: none
+		height: 31px
+		margin-left: 5px
+		display: inline
+		float: left
+		background-image: url('../img/fontsize.png')
+		position: relative
+		// top: -5px
+
+	&-small
+		width: 20px
+
+	&-normal
+		width: 26px
+		background-position: -20px 0
+
+	&-big
+		width: 26px
+		background-position: -46px 0
+
+a.a-fontsize
+	&-small
+		&:hover, a.a-fontsize-small 
+			background-position: 0 -31px
+
+	&-normal
+		&:hover, a.a-fontsize-small 
+			background-position: -20px -31px
+
+	&-big
+		&:hover, a.a-fontsize-small 
+			background-position: -46px -31px
+
+.a-colors
+	margin-left: 13px
+	display: flex
+	align-items: center
+
+	dt
+		margin-right: 10px
+
+	a 
+		height: 31px
+		margin-left: 5px
+		display: inline
+		float: left
+		background-image: url('../img/colors.png')
+		position: relative
+		top: -3px
+		text-decoration: none
+		width: 26px
+
+
+.a-color2
+	background-position: -26px 0
+
+.a-color3
+	background-position: 100% 0
+
+
+.sub-menu__list
+	li 
+		&:not(:first-child)
+			margin-top: 10px
+
+
+
+
+.head-special
+	padding: 21px
+	background: linear-gradient(to top, #eee 0%, #fff 55%)
+
+
+	&-cont
+		position: sticky
+		top: 0
+
+	&__bot
+		display: none
+
+	&__top 
+		padding: 20px 0
+		text-align: right
+		color: #fff
+
+
+img, svg, .head-links__soc, .main-logo__img, .header-slider, .footer-menu__cont, .phone__link, .about-foto__list, .aside
+	display: none
+
+
+
+.special__body 
+	.head-special
+		&-cont
+			display: block !important
+
+		&__top
+			display: none
+
+		&__bot 	
+			display: block
+
+.fontsize-small
+	font-size: 16px
+
+html 
+	&.fontsize-small
+		font-size: 100%
+
+		a.a-fontsize-small
+			background-position: 0 -31px
+
+
+	&.fontsize-normal
+		font-size: 115%
+
+		a.a-fontsize-normal
+			background-position: -20px -31px
+
+	&.fontsize-big
+		font-size: 129%
+
+		a.a-fontsize-big
+			background-position: -46px -31px
+
+.dev__img
+	max-width: 65px 
+
+body
+	font-family: "Roboto"
+
+	&.color1
+		color: #000
+
+		a
+			color: #000
+
+		.a-color1
+			background-position: 0px 31px
+
+
+	&.color2
+		background: #000
+		color: #fff !important
+
+		.a-color2
+			background-position: -26px 31px
+
+
+		* 
+			border-color: #fff !important
+
+
+		.basepage__image.image--right:before
+			border-top: 1px solid #fff
+			border-left: 1px solid #fff
+
+		.dev__img
+			filter: invert(0)
+
+		.search, .search__input-cont form
+			border: 1px solid #fff
+
+		.head-bot__left + .search
+			display: none
+
+	&.color3
+		background: #9dd1ff
+
+		.a-color3
+			background-position: -52px 31px
+
+.wrapper
+	width: 960px
+	margin: 0 auto !important
+
+.main-logo
+	margin-bottom: 30px
+	&__text
+		font-size: rem(30)
+
+		> div 
+			font-size: rem(16)
+
+.search
+	display: flex
+
+	&__label
+		font-size: rem(18)
+		margin-bottom: 15px
+		font-weight: bold
+
+	&__input
+
+		width: calc(100% - 150px)
+		height: 60px
+		border: 2px solid #000
+		padding: 0 15px
+
+		&-cont
+			order: 2
+			margin-top: 30px
+
+			form
+				display: flex
+
+	&__submit
+		width: 150px
+		height: 60px
+		display: block
+		background: #000
+		color: #fff 
+		font-size: rem(16)
+		border: 0
+
+
+
+.one-links
+	order: 1 
+	width: 200px
+
+	.main-nav__item
+		width: 100% !important
+		margin-left: 0 !important
+
+		&:not(:first-child)
+			margin-top: 15px
+
+
+.sub-menu__item
+	&:not(:first-child)
+		margin-top: 10px
+.head
+	display: flex 
+	flex-direction: column
+
+	&-special-cont
+		order: 2
+
+	&-top 
+		order: 4
+		display: none
+
+	&-bot 
+		order: 3
+		margin-top: 30px
+
+	&-top__menu
+
+		&-list 
+			display: flex 
+			flex-wrap: wrap
+			margin: 0 0 0 -20px
+
+		&-item
+			width: calc((100% - 20px * 6) / 6)
+			flex: 1 1 auto
+			margin: 0 0 0 20px
+
+
+		&-link
+			font-size: rem(18)
+			font-weight: bold
+
+	.main-nav
+		&__item
+			width: calc((100% - 20px * 6) / 6)
+			flex: 1 1 auto
+			margin: 0 0 0 20px
+
+		&__link
+			font-size: rem(18)
+			font-weight: bold
+
+
+.head-top
+	margin-top: 30px
+
+	&__menu-list
+
+		>
+
+			.main-nav__item:nth-child(1)
+				order: 2
+				width: 100%
+				margin-top: 30px
+
+				.sub-menu__list
+					column-count: 3
+
+					li
+						break-inside: avoid
+
+
+.main-nav__item
+	&:not(.js__has-submenu)
+		display: none
+
+.one-links
+	.main-nav__item
+		display: block
+
+.sub-menu--wrap
+	margin-top: 20px
+
+
+.content	
+	margin-top: 30px
+
+	> div 
+		margin: 45px 0
+
+.main-slider
+	&__slide
+
+		&:not(:first-child)
+			margin-top: 20px
+
+		&-title
+			font-size: rem(20)
+			font-weight: bold
+
+		&-btn
+			margin-top: 10px
+
+			a 
+				text-decoration: underline
+
+.help	
+	&__list
+		display: flex 
+		margin-top: 50px
+
+	&__item
+		font-size: rem(30)
+		font-weight: bold
+		display: inline-block
+
+		border-bottom: 2px solid #000
+
+		&:not(:first-child)
+			margin-left: 30px
+
+		br 
+			display: none
+
+.title__block, .titile-block
+	font-size: rem(30)
+	font-weight: bold
+	margin-bottom: 20px
+
+.more__link
+	text-decoration: underline
+
+.services
+	margin-top: 30px
+	margin-bottom: 30px
+
+	&__list
+		display: flex 
+		flex-wrap: wrap 
+		margin: 0 0 -30px -30px
+
+	&__item
+		display: flex
+		align-items: center
+		width: calc((100% - 30px * 3) / 3)
+		margin: 0 0 30px 30px
+		padding: 1.4rem
+		border: 1px solid #000
+
+	&__more
+		margin-top: 20px
+
+
+.about__more
+	margin-top: 20px
+
+.specialist
+	margin: 30px 0
+
+	&__item 
+		width: calc((100% - 30px * 3) / 3)
+		margin:  0 0 30px 30px
+		border: 1px solid #000
+		padding: 1.4rem
+
+	&__name
+		font-size: rem(20)
+		margin-bottom: 10px
+		font-weight: bold
+
+	&__more
+		margin-top: 20px
+
+	&__img
+		display: none
+
+.specislist__list
+	display: flex 
+	flex-wrap: wrap 
+	margin:  0 0 -30px -30px
+
+
+.news
+	&__list
+		display: flex 
+		flex-wrap: wrap 
+		margin:  0 0 -30px -30px
+
+	&__item 
+		width: calc((100% - 30px * 3) / 3)
+		margin:  0 0 30px 30px
+
+	&__data
+		margin-bottom: 10px
+
+	&__text
+		font-size: rem(18)
+
+	&__more
+		margin-top: 20px
+
+.city-area
+	&__list
+		display: flex 
+		flex-wrap: wrap
+		margin: 0 0 -30px -30px
+
+	&__item
+		width: calc((100% - 30px * 3) / 3)
+		margin: 0 0 30px 30px
+		padding: 1.4rem 
+		border: 1px solid #000
+
+	&__title
+		font-weight: bold
+		margin-bottom: 10px
+
+	&__link
+		margin-top: 10px
+		display: inline-block
+		text-decoration: underline
+
+
+.footer
+	margin-top: 40px
+	&__bot
+		margin: 20px 0
+
+		.wrapper 
+			display: flex 
+			justify-content: space-between
+
+.dev
+	display: flex 
+	align-items: center
+	margin-top: 10px
+	&__img
+		display: inline-block
+		filter: invert(1)
+		margin-left: 15px
+
+.title-block__cont
+	margin: 30px 0
+
+	a 
+		text-decoration: underline
+
+	a,span
+		font-size: rem(18)
+		font-weight: 500
+
+
+
+#appointment, #consultation
+	display: none
+
+	> div 
+		width: 960px
+		margin: 0 auto
+
+.services-inner
+	margin-bottom: 30px
+
+	&__list
+		display: flex 
+		flex-wrap: wrap 
+		margin: 0 0 -30px -30px
+
+	&__item 
+		width: calc((100% - 30px * 3) / 3)
+		margin: 0 0 30px 30px
+		padding: 1.4rem 
+		border: 1px solid #000
+
+
+.gallery
+	&__list
+		display: flex 
+		flex-wrap: wrap
+		margin: 0 0 -30px -30px
+
+	&__item 
+		width: calc((100% - 30px * 3) / 3)
+		margin: 0 0 30px 30px
+		padding: 1.4rem 
+		border: 1px solid #000
+
+	&__data
+		margin-bottom: 10px
+
+	&__title
+		font-weight: bold
+
+.text-page 
+	iframe
+		display: none
+
+.paginator
+	display: flex 
+	justify-content: center
+	margin: 40px 0
+
+	&__link
+		padding: 10px
+
+.basepage
+	&__slider
+		display: none
+
+	&__image.image--right
+		position: relative
+		display: flex 
+		align-items: center
+		margin-bottom: 20px
+
+		&:before
+			content: ''
+			display: inline-block
+			margin-right: 10px
+			+size(8px)
+			border:
+				top: 1px solid #000
+				left: 1px solid #000
+			transform: rotate(-45deg)
+
+
+%text-page, .text-page
+	font-size: rem(14)
+	line-height: rem(26)
+
+	> *:not(:first-child)
+		margin-top: 25px
+
+	strong 
+		font-weight: bold
+	h2, h3, h4, h5, h6
+		font-weight: 300
+
+	h2
+		font-size: rem(22)
+		line-height: rem(28)
+		
+
+	h3
+		font-size: rem(20)
+		line-height: rem(26)
+
+	h4, h5
+		line-height: rem(24)
+
+	h4
+		font-size: rem(18)
+	
+	h5
+		font-size: rem(16)
+
+	img[align="right"]
+		float: right
+		margin-left: 20px
+
+	img[align="left"]
+		float: left
+		margin-right: 20px
+
+	blockquote
+		border-left: 2px solid $main-color
+		padding-left: 21px
+
+	table
+		width: 100%
+		table-layout: fixed
+		color: #000
+
+		td, th
+			padding: 15px 23px
+			font-weight: 300
+			vertical-align: middle
+
+	table[border="1"]
+
+		td, th
+			border: 1px solid $border-color
+
+	ul, ol
+		max-width: 650px
+		margin-top: 0 !important
+
+	li
+		//padding-left: 20px
+		position: relative
+
+		&:before
+			display: inline-block
+
+		&:not(:first-child)
+			//margin-top: 21px
+
+		ul, ol
+			margin-bottom: 20px
+
+		li
+			padding-left: 20px
+
+			&:not(:first-child)
+				margin-top: 0
+
+	ul
+		margin-bottom: 30px
+
+		li
+
+			&:before
+				content: ""
+				background: #000
+				width: 12px
+				height: 1px
+				vertical-align: middle
+				margin: 0 14px 4px 0
+
+		ul
+
+			li
+				//padding-left: 20px
+
+				&:before
+					content: "-"
+					+size(auto)
+					background: none
+					margin: 0 5px 5px 0
+	
+	ol
+		counter-reset: i
+
+		li
+			counter-increment: i
+
+			&:before
+				content: counter(i) "."
+				margin-right: 4px
+	dt, dd 
+		display: inline
+		font-style: italic
+
+	blockquote
+		position: relative
+		display: inline
+		&:before
+			content: "\201c"
+			left: -20px
+			top: -15px
+			position: absolute
+			font-size: 40px
+			color: #323c8d
+		&:after
+			content: "\201c"
+			right: -20px
+			bottom: -40px
+			position: absolute
+			font-size: 40px
+			color: #323c8d
+
+
+.block-btn
+	display: flex
+
+
+.btn--main
+	border: 1px solid #000
+	padding: 15px 20px
+	line-height: 1
+	margin-bottom: 20px
+
+	&:not(:first-child)
+		margin-left: 29px
+
+
+.consultation
+	&__item
+
+		&:not(:first-child)
+			margin-top: 30px
+			padding-top: 20px
+			border-top: 1px solid #000
+
+
+
+
+	&__info
+		margin-top: 10px
+
+	&__name
+		font-weight: bold
+		margin-bottom: 5px
+
+	&__data
+		margin-bottom: 5px
+
+
+#map
+	display: none
+
+.map-info
+	&__list
+		width: 960px
+		margin: 0 auto
+		display: flex
+
+	&__item
+		padding: 1.4rem 
+		border: 1px solid #000
+
+		&:not(:first-child)
+			margin-left: 30px
+
+	&__scheme
+		display: inline-block
+		margin-top: 10px
+		border-bottom: 1px solid #000
+
+
+.news
+	&__list-inner
+
+	&__item-inner
+		display: block
+
+		&:not(:first-child)
+			margin-top: 30px
+
+	&__text 
+		font-size: rem(18)
+
+
+.download
+	&-file
+		&__item
+
+			&:not(:first-child)
+				margin-top: 30px
+		.btn
+			border-bottom: 1px solid #000
+
+	&-btn
+		margin-top: 10px
+
+.download-file__list
+	.btn
+		border-bottom: 1px solid #000
+
+.clinik
+	&-info
+		margin-top: 30px
+
+		&__title
+			font-size: rem(20)
+			margin-bottom: 15px
+
+	&-address
+		p 
+			line-height: 1.3
+
+
+.personal
+	&__list
+		display: flex 
+		flex-wrap: wrap 
+		margin: 0 0 -30px -30px
+
+	&__item 
+		width: calc((100% - 30px * 3) / 3)
+		margin: 0 0 30px 30px
+		border: 1px solid #000
+		padding: 1.4rem
+
+	&__name
+		margin-bottom: 10px
+		font-size: rem(18)
+		font-weight: bold
+
+
+.testemonials
+	&__item
+		padding: 1.4rem 
+		border: 1px solid #000
+
+		&:not(:first-child)
+			margin-top: 30px
+
+	&__top-btn
+		display: none
+
+	&__name
+		font-size: rem(18)
+		font-weight: bold
+		margin-bottom: 10px
+
+	&__location
+		margin-bottom: 10px
+
+	&-detail__item
+		padding: 1.4rem 1.4rem 1.4rem 3rem
+		border-top: 1px solid #000
+		margin-top: 20px
+
+		&-user
+			font-size: rem(16)
+			font-weight: bold
+			margin-bottom: 10px
+
+		&-date
+			margin-top: 15px
+
+		&-stat
+			font-size: rem(14)
+			margin-bottom: 5px
+
+		&-text
+			line-height: 1.4
+
+.paginator__el.active
+	border-bottom: 1px solid #000
+
+
+.map-info__title
+	font-weight: bold
+	margin-bottom: 5px
+
+.root-item-selected
+	border-bottom: 1px solid #000
+
+.item-selected
+	a
+		border-bottom: 1px solid #000
+

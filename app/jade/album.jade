@@ -1,0 +1,25 @@
+html
+	head
+		meta(charset="utf-8")
+		title Альбом
+		include inc/head.jade
+		include inc/css.jade
+	body.inner
+		#page-wr
+			.mobile-menu
+			#content
+				include inc/header-inner.jade
+				include inc/breadcrambs.jade
+				.content
+					.wrapper 
+						section.album
+							.gallery__list
+								- for (var i = 1; i <= 3; i++ )
+									each img in ["1", "2", "3"]
+										a.gallery__item.fancybox(href="#")
+											figure.gallery__img
+												img(src="img/photos/gallery-"+img+".jpg", alt="")
+						include inc/paginator.jade
+
+			include inc/footer.jade
+		include inc/scripts.jade

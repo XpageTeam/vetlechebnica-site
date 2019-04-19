@@ -1,0 +1,85 @@
+html
+	head
+		meta(charset="utf-8")
+		title Отзывы
+		include inc/head.jade
+		include inc/css.jade
+	body.inner
+		#page-wr
+			.mobile-menu
+			#content
+				include inc/header-inner.jade
+				.title-block__cont
+					.wrapper
+						.titile-block
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href='#') Главная
+									span.title-block__title Отзывы
+				.content
+					.wrapper
+						h1.titile-block Отзывы 
+						.block-btn
+							.btn--main
+								a.btn.btn--consultation(href="#") Все отзывы с флампа
+							
+						section.testemonials
+							.testemonials__list
+								.testemonials__item
+									.testemonials__item-wr
+										.testemonials__top
+											.testemonials__top-user
+												.testemonials__name
+													figure
+														img(src="img/user-slider.jpg", alt="") 
+													span Денис Сизов
+												.testemonials__location 
+													span.location-img 
+														img(src="img/flag.jpg", alt="")
+													| Россия
+											.testemonials__top-btn
+												span Свернуть
+
+										.testemonials__text
+											.text-page 
+												p Отличная клиника особенно хочется отметить Хирурга Ивана Борисовича он мастер своего дела. У кролика оказался камень ... Так Иван Борисович мастерски провёл операцию и лечение кролик выжил хотя и не молодой уже, кролу 7 лет . Живёт с одной почкой,ест и пьёт ведёт обычный образ жизни как и раньше. Хочу сказать спасибо сотрудникам клиники и отдельно Ивану Борисовичу. Отличная клиника особенно хочется отметить Хирурга Ивана Борисовича он мастер своего дела. У кролика оказался камень ... Так Иван Борисович мастерски провёл операцию и лечение кролик выжил хотя и не молодой уже, кролу 7 лет . Живёт с одной почкой,ест и пьёт ведёт обычный образ жизни как и раньше. Хочу сказать спасибо сотрудникам клиники и отдельно Ивану Борисовичу.Отличная клиника особенно хочется отметить Хирурга Ивана Борисовича он мастер своего дела. У кролика оказался камень ... Так Иван Борисович мастерски провёл операцию и лечение кролик выжил хотя и не молодой уже, кролу 7 лет . Живёт с одной почкой,ест и пьёт ведёт обычный образ жизни как и раньше. Хочу сказать спасибо сотрудникам клиники и отдельно Ивану Борисовичу. 
+										.testemonials__data 10.11.2018 
+
+									.testemonials-detail__item.testemonials-detail__item--gray
+										.testemonials-detail__item-content
+											.testemonials-detail__item-user Полосков И.Н.
+											.testemonials-detail__item-stat Главный врач
+											.testemonials-detail__item-text Спасибо за отзыв!
+											.testemonials-detail__item-date 17.12.2018
+								.testemonials__item
+									.testemonials__item-wr
+										.testemonials__top
+											.testemonials__top-user
+												.testemonials__name Денис Сизов
+												.testemonials__location 
+													span.location-img 
+														img(src="img/flag.jpg", alt="")
+													| Россия
+											.testemonials__top-btn
+												span Свернуть
+
+										.testemonials__text
+											.text-page 
+												p Отличная клиника особенно хочется отметить Хирурга Ивана Борисовича он мастер своего дела. У кролика оказался камень ... Так Иван Борисович мастерски провёл операцию и лечение кролик выжил хотя и не молодой уже, кролу 7 лет . Живёт с одной почкой,ест и пьёт ведёт обычный образ жизни как и раньше. Хочу сказать спасибо сотрудникам клиники и отдельно Ивану Борисовичу. Отличная клиника особенно хочется отметить Хирурга Ивана Борисовича он мастер своего дела. У кролика оказался камень ... Так Иван Борисович мастерски провёл операцию и лечение кролик выжил хотя и не молодой уже, кролу 7 лет . Живёт с одной почкой,ест и пьёт ведёт обычный образ жизни как и раньше. Хочу сказать спасибо сотрудникам клиники и отдельно Ивану Борисовичу.Отличная клиника особенно хочется отметить Хирурга Ивана Борисовича он мастер своего дела. У кролика оказался камень ... Так Иван Борисович мастерски провёл операцию и лечение кролик выжил хотя и не молодой уже, кролу 7 лет . Живёт с одной почкой,ест и пьёт ведёт обычный образ жизни как и раньше. Хочу сказать спасибо сотрудникам клиники и отдельно Ивану Борисовичу. 
+										.testemonials__data 10.11.2018 
+
+									.testemonials-detail__item.testemonials-detail__item--gray
+										.testemonials-detail__item-content
+											.testemonials-detail__item-user
+												figure
+													img(src="img/user-slider.jpg", alt="") 
+												span Денис Сизов
+											.testemonials-detail__item-stat Главный врач
+											.testemonials-detail__item-text Спасибо за отзыв!
+											.testemonials-detail__item-date 17.12.2018
+
+								
+							include inc/paginator.jade
+
+			include inc/footer.jade
+		include inc/scripts.jade

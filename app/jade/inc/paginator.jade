@@ -1,0 +1,11 @@
+ul.paginator
+	li.paginator__el.prev
+		a.paginator__arrow.paginator__arrow--left(href="#")
+	li.paginator__el.active
+		a.paginator__link(href="#") 1
+	- for(var i = 2; i <= 6; i++){
+		li.paginator__el
+			a.paginator__link(href="#")=i
+	- }
+	li.paginator__el.next
+		a.paginator__arrow.paginator__arrow--right(href="#")

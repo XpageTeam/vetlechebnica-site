@@ -1,0 +1,1157 @@
+$output-bourbon-deprecation-warnings: false;
+@import "bourbon"
+@import "vars"
+
+@media screen and (max-width: 1600px)
+	.specialist
+		.slick-list
+			overflow: hidden
+
+@media screen and (max-width: 1500px)
+
+	.main-slider__slide
+		img 
+			min-height: 100vh
+			object-fit: cover 
+			object-position: center
+
+	.header-slider
+		margin-right: 75px
+
+@media screen and (max-width: 1400px)
+	.main-slider__slide-title
+		font-size: 2.75rem
+		line-height: 3.3125rem
+	.help__item
+		padding-left: 90px
+		&:before
+			content: ""
+			width: 60px
+			background-size: contain !important
+		&:after
+			content: ""
+			width: 60px
+			background-size: contain !important
+	.services
+		background: #31c5bd
+		padding: 80px 0
+		&__list
+			margin: 45px 0 20px -98px
+	.about-main
+		padding: 80px 0
+	.about__more
+		padding: 40px 0 0 0
+	.specialist
+		padding: 80px 0
+		&__item
+			margin-right: 50px
+		&__title
+			margin-bottom: 54px
+		.slick-next
+			right: 50px
+		.slick-prev
+			right: 80px
+		
+	.news-main
+		padding: 80px 0
+		.news
+			&__title
+				margin-bottom: 45px
+			&__list 
+				margin-right: -50px
+			&__item
+				margin-right: 50px
+			
+	.city-area
+		padding: 80px 0
+	.head-bot__left
+		width: 35%
+	.head-bot__right
+		width: auto
+	.head 
+		.search
+			margin-left: auto
+			width: auto
+		.search__input-cont
+			position: absolute
+	.main-slider__slide-title-cont
+		margin-top: 0
+	.title-block__cont
+		margin-bottom: 45px
+	.gallery
+		&__list
+			margin-left: -50px
+		&__item
+			width: calc((100% - 50px * 4) / 4)
+			margin: 0 0 35px 50px
+			max-width: 280px
+		&__info
+			 margin-top: 25px
+		&__title 
+			margin-top: 15px
+	.paginator
+		margin-top: 0
+	.inner #content
+		margin-bottom: 35px
+	.personal
+		&__list
+			margin-left: -50px
+		&__item
+			width: calc((100% - 50px * 4) / 4)
+			margin: 0 0 50px 50px
+	.album
+		.gallery
+			&__list
+				margin-left: -60px
+			&__item
+				width: calc((100% - 60px * 4) / 4)
+				margin: 0 0 35px 60px
+	.gallery
+		.gallery
+			&__list
+				margin-left: -60px
+			&__item
+				width: calc((100% - 60px * 4) / 4)
+				margin: 0 0 35px 60px
+	.map
+		margin: -45px 0 25px 0
+		// margin: -45px 0 -45px 0
+		&-info
+			position: relative
+			left: 0
+			max-width: 100%
+			border-bottom: 1px solid $border-color
+			transform: translateY(0)
+			&__list
+				display: flex
+				justify-content: center
+			&__item
+				&:not(:first-child)
+					border-left: 1px solid $border-color 
+				&:after 
+					display: none
+		
+	.map-info__item
+		padding: 40px
+	.aside
+		// display: none
+		margin-right: 1.4rem
+	.news-inner 
+		.news__item-inner
+			margin-right: 60px
+		.news__list-inner 
+			margin-right: -60px
+
+
+
+@media screen and (max-width: 1200px)
+
+	// .help
+	// 	position: relative
+	// 	bottom: 0 !important
+
+	.main-slider__slide-title
+		font-size: 2rem
+		line-height: 1
+
+	.main-slider__slide img
+		min-height: calc(100vh - 20vh)
+
+	.main-slider__slide-title
+		max-width: 70%
+
+	.header-slider
+
+		&__item
+			height: auto
+
+	.help-cont
+		align-items: center
+		display: flex
+		
+		
+
+	.head-top__menu-link
+		padding: 11px 0px 12px 0
+
+	.burger
+		position: relative
+		z-index: 100
+		display: flex
+		justify-content: center
+		align-items: center
+		box-sizing: content-box
+		width: 30px
+		height: 30px
+		padding: 15px
+		background: 0 0
+		border: 0
+		user-select: none
+		margin-left: -15px
+		margin-right: -15px
+		&:before 
+			display: none
+		span
+			position: relative
+			display: inline-block
+			width: 30px
+			height: 3px
+			vertical-align: bottom
+			background: $main-color
+			transition: background .2s .4s
+			&:before
+				border-radius: 0
+				transform: none
+				content: ""
+				position: absolute
+				left: 0
+				top: 10px
+				width: 100%
+				height: 3px
+				background: $main-color
+				transform-origin: 50% 50%
+				transition: top .3s .3s,transform .3s
+			&:after
+				content: ""
+				position: absolute
+				left: 0
+				top: -10px
+				width: 100%
+				height: 3px
+				background: $main-color
+				transform-origin: 50% 50%
+				transition: top .3s .3s,transform .3s
+
+	.mobile-menu--open
+		#content
+			transform: translate3d(-320px, 0,0)
+			box-shadow: 7px -1px 15px 0px rgba(0, 0, 0, 0.13)
+		.menu-mobile
+			overflow-y: scroll
+			overflow-x: hidden
+		.submenu
+			display: block
+			position: absolute
+			transform: translate3d(350px, 0,0)
+			top: 0
+			height: 100%
+			background: #fff
+			transition: .4s
+			z-index: 10	
+
+		.burger 
+			> span
+				background: 0 0
+		.burger 
+			> span
+				&:before
+					transform: rotate3d(0,0,1,45deg)
+					top: 0
+					transition: top .3s,transform .3s .5s
+		.burger 
+			> span
+				&:after 
+					transform: rotate3d(0,0,1,-45deg)
+					top: 0
+					transition: top .3s,transform .3s .5s
+	.mobile-menu
+		display: block
+		position: absolute
+		top: 0
+		right: 0
+		height: calc(100% - 340px)
+		width: 320px
+	.mobile-menu__link
+		padding: 15px
+		border-bottom: 1px solid $border-color
+		display: block
+	.submenu-open
+		.submenu
+			transform: translate3d(0, 0,0)
+			width: 320px
+	.submenu__el 
+		padding: 15px 
+		border-bottom: 1px solid $border-color
+	.submenu__link
+		color: #000
+		text-decoration: none
+	.submenu__back
+		position: relative
+		display: flex 
+		align-items: center
+		font-weight: bold
+		background: $main-color
+		color: #fff
+		&:after
+			content: ""
+			position: absolute
+			right: 1.4rem
+			top: calc(50% - 10px)
+			display: inline-block
+			background: url('../img/ico-arrow.svg') no-repeat center
+			+size(20px)
+			background-size: contain !important
+			z-index: 5
+
+	.mobile-menu__link.sub
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			right: 1.4rem
+			top: calc(50% - 10px)
+			+size(20px)
+			background: url('../img/ico-arrow-gray.svg') no-repeat center
+			background-size: contain !important
+	.shop.js__shop,
+	.record-online.js__reg
+		display: block
+		background: #fff
+		padding: 0
+		border-bottom: 1px solid $border-color
+		max-width: 100%
+		margin: 0
+		a 
+			display: block
+			color: #000
+			text-decoration: none
+			padding: 15px
+
+	.help__list.js__help
+		position: relative
+		color: #000
+		flex-direction: column
+		.help__item 
+			color: #000
+			padding: 15px
+			padding-left: 50px
+			margin: 0
+			border-bottom: 1px solid $border-color
+			font-size: rem(14)
+			br 
+				display: none
+			&:before 
+				display: none
+			&:after
+				opacity: 1
+				width: 30px
+				left: 15px 
+
+
+
+
+	.head-bot__right
+		display: none
+	.head
+		&-bot__left
+			width: auto
+		.search
+			width: auto
+	.main-slider__slide-title-cont
+		// margin-top: 35px
+	.help
+		bottom: 10px
+		&__item
+			padding: 15px 0 15px 55px
+			font-size: 1rem
+			line-height: 1.25rem
+			&:before
+				width: 40px
+			&:not(:last-child)
+				margin-right: 35px
+	.main-slider .slick-dots
+		right: 2rem
+		bottom: 20px
+	.main-slider__slide-btn
+		margin-top: 15px
+
+	.services
+		padding: 40px 0
+		&__list
+			margin: 30px 0 20px -35px
+		&__item 
+			width: calc((100% - 35px * 3) / 3)
+			margin-left: 35px
+			margin-bottom: 25px
+			padding: 25px 04
+			align-items: center
+			display: flex
+			&:after 
+				top: calc(50% - 16px)
+	.services-inner
+		&__list
+			margin-left: -35px
+		&__item
+			width: calc((100% - 35px * 3) / 3)
+			margin-left: 35px
+			padding: 25px 0
+			margin-bottom: 25px
+			align-items: center
+			display: flex
+			&:after 
+				top: calc(50% - 16px)
+	.about-main
+		padding: 40px 0
+	.specialist
+		padding: 40px 0
+	.news-main, .news-inner
+		padding: 40px 0
+		.news__item
+			// margin-right: 70px
+		.news__img 
+			margin-bottom: 25px
+		.news__slider
+			margin-bottom: 45px
+	.footer-menu__cont
+		flex-direction: row
+
+		&:nth-child(1)
+			display: none
+		&:nth-child(2)
+			display: none
+		&:nth-child(3)
+			display: none
+	.footer__search-wrap
+		width: 45%
+	.footer
+		padding: 45px 0 45px 0
+	.gallery
+		&__list
+			margin-left: -35px
+		&__item
+			width: calc((100% - 35px * 3) / 3)
+			margin: 0 0 35px 35px
+	.personal
+		&__list
+			margin-left: -50px
+		&__item
+			width: calc((100% - 50px * 3) / 3)
+			margin: 0 0 50px 50px
+	.block-btn
+		margin-bottom: 35px
+	.consultation
+		&__top
+			padding: 1.4rem
+			padding-right: 40px
+			&:after
+				right: 15px
+				top: 45px
+		&__info
+			padding: 1.4rem	
+
+	.album
+		.gallery
+			&__list
+				margin-left: -60px
+			&__item
+				width: calc((100% - 60px * 3) / 3)
+				margin: 0 0 35px 60px
+	.gallery
+		.gallery
+			&__list
+				margin-left: -60px
+			&__item
+				width: calc((100% - 60px * 3) / 3)
+				margin: 0 0 35px 60px
+	.map-info
+		&__item
+			padding: 1.4rem
+		&__contacts
+			display: flex 
+			flex-direction: column
+	
+	.contacts-description
+		font-size: 1.125rem
+		line-height: 1.75rem
+		margin-top: 15px
+	.transport
+		padding: 35px 0 0 0
+		margin: 35px 0 0 0
+	.price
+		padding: 1.4rem
+		p
+			font-size: 1rem
+			line-height: 1.3rem
+	.btn--price
+		padding: 7px 10px
+	.foto
+		&__list
+			margin: 35px 0 35px -25px
+		&__item 
+			width: calc((100% - 25px * 3) / 3)
+			margin-left: 25px
+	.news-inner 
+		.news__slider-inner
+			margin-bottom: 35px
+	.download-file__item
+		padding: 1.4rem
+	.clinik-info
+		margin-top: 35px
+		padding: 1.4rem
+	.footer-spam
+		width: 100%
+		flex-direction: row-reverse
+
+	.services__item-text
+		padding-right: 20px
+
+
+
+
+@media screen and (max-width: 820px)
+	html 
+		font-size: 95%
+
+	.testemonials__item-wr
+		padding: 45px 25px 52px 85px
+
+	.testemonials__text
+		height: 77px
+
+	.testemonials__list
+		margin-bottom: 30px
+
+	.header-slider
+		margin-right: 30px
+
+
+	.wrapper
+		padding: 0 1.4rem
+	.head-top
+		display: none
+	.main-slider__slide-title
+		font-size: 1.75rem
+		line-height: 2.3125rem
+	.help__item
+		padding: 15px 0 15px 45px
+		line-height: 1rem
+		&:before
+			width: 35px
+	.main-slider 
+		.slick-dots
+			right: 1.4rem
+			bottom: 25px
+			li:not(:first-child)
+				margin-left: 20px
+	.head-bot
+		.wrapper 
+			padding: 0.2rem 1.4rem
+	.services
+		padding: 30px 0
+	.ico-btn
+		&:before
+			+size(35px)
+			margin-right: 15px
+	.services
+		padding: 30px 0
+		&__list
+			margin: 20px 0 20px -50px
+		&__item 
+			width: calc((100% - 50px * 3) / 3)
+			margin-left: 50px
+			margin-bottom: 25px
+			padding: 25px 0
+	.about-main
+		padding: 30px 0
+	.specialist
+		padding: 30px 0
+		&__item
+			margin-right: 80px
+
+	.news-main, .news-inner
+		padding: 30px 0
+		.news__item
+		.news__img 
+			margin-bottom: 25px
+		.news__slider
+			margin-bottom: 45px
+	.more__link
+		&:before
+			+size(35px)
+			margin-right: 15px
+	.about__title, .specialist__title
+		margin-bottom: 25px
+	.specialist__slider
+		margin-bottom: 20px
+	.about__more
+		padding: 20px 0 0 0
+	.footer
+		padding: 25px 0 25px 0
+		&__top
+			padding: 0 0 25px 0
+		&__bot
+			padding: 25px 0 0 0
+			.wrapper 
+				flex-wrap: wrap
+		&__soc
+			order: -1 
+			width: 100%
+			margin-bottom: 20px
+		.soc 
+			justify-content: center
+	.city-map
+		display: none
+	.title-block__cont
+		margin-bottom: 35px
+	.bread-crumbs__link
+		display: none
+	.personal
+		&__list
+			margin-left: -30px
+		&__item
+			width: calc((100% - 30px * 2) / 2)
+			margin: 0 0 30px 30px
+	.services-inner
+		&__list
+			margin-left: -35px
+		&__item
+			width: calc((100% - 35px * 2) / 2)
+			margin-left: 35px
+			padding: 25px 0
+			margin-bottom: 15px
+
+	.basepage--btn
+		margin-bottom: 35px
+	.album
+		.gallery
+			&__list
+				margin-left: -25px
+			&__item
+				width: calc((100% - 25px * 3) / 3)
+				margin: 0 0 25px 25px
+
+	.gallery
+		.gallery
+			&__list
+				margin-left: -25px
+			&__item
+				width: calc((100% - 25px * 3) / 3)
+				margin: 0 0 35px 25px
+			&__info
+				margin-top: 15px
+	.wrapper-aside
+		flex-direction: column
+	.aside 
+		width: 100%
+	.aside + section
+		width: 100%
+	.contacts-img
+		margin-bottom: 15px
+	.specialist__inner 
+		.specialist__title
+			margin-bottom: 25px
+	.specialist 
+		.slick-next
+			right: 75px
+		.slick-prev 
+			right: 105px
+	.news-inner 
+		.news__item-inner
+			margin-right: 25px
+		.news__list-inner
+			margin-right: -25px
+	.time-block:first-child 
+		height: 40px
+	.time-block
+		height: 55px
+	.status__list
+		padding: 1.4rem
+
+
+	//формы
+	#appointment, #consultation
+		padding: 1.4rem
+	.forms-text-cont
+		margin-bottom: 20px
+
+
+
+
+
+
+@media screen and (max-width: 667px)
+
+
+	html 
+		font-size: 85%
+	.fancybox-lock, .fancy-active
+		#page-wr
+			display: none
+		body, html
+			overflow-x: !important
+		.fancybox-lock, .fancybox-lock body
+			overflow-x: hidden !important
+		.fancybox-wrap, .fancybox-mobile, .fancybox-type-inline, .fancybox-opened
+			position: absolute !important
+			top: 0 !important
+			left: 0 !important
+			opacity: 1 !important
+			overflow: visible !important
+			width: 100% !important
+			height: 100% !important
+		.fancybox-skin
+			width: 100% !important
+			height: 100% !important
+		.fancybox-outer
+			width: 100% !important
+			height: 100% !important
+		.fancybox-inner
+			width: 100% !important
+			height: 100% !important
+			overflow-y: scroll !important
+			overflow-x: hidden !important
+			-webkit-overflow-scrolling: touch
+		.fancybox-overlay
+			width: 100% !important
+			height: 100% !important
+			display: block !important
+		.fancybox-overlay-fixed
+			width: 100% !important
+			height: 100% !important
+			display: block !important
+			overflow: auto !important
+		.fancybox-overlay
+			background: none !important
+			width: 100% !important
+	.head .search
+		display: none
+
+	.content .titile-block
+		font-size: 2rem
+
+	.testemonials__name figure
+		position: relative
+		top: 0
+		left: 0
+		margin-bottom: 10px
+
+	.testemonials__item-wr
+		padding: 1.4rem
+
+	.testemonials__text
+		height: 71px
+
+	.testemonials-detail__item
+		padding: 1.4rem
+
+	.testemonials-detail__item-content:before
+		display: none
+
+	.testemonials-detail__item-user figure
+		position: relative
+		left: 0
+		top: 0
+		margin-bottom: 10px
+		
+
+	
+	.main-slider__slide img
+		min-height: auto
+
+	.header-slider
+		margin-right: 0
+		max-width: 100% 
+
+		&__item
+			padding: 1.4rem 0
+
+	.help
+		position: relative
+		bottom: 0
+
+	.title__block
+		font-size: 2rem
+		line-height: 2rem
+
+	.header-slider__arrow
+		top: 23px
+		right: 0
+
+	.main-slider
+		display: flex 
+		flex-direction: column-reverse 
+		&__slide-title
+			font-size: 1rem
+			line-height: 1.5rem
+
+		.slick
+			&-list, &-track
+				min-width: 100% !important
+
+	.header-slider
+		&__list
+			max-width: 100% 
+
+	.soc__item
+		flex: none
+
+	.footer 
+		.soc__item
+			+size(35px)
+			&:not(:last-child)
+				margin-right: 3px
+
+
+	.head
+		position: relative
+	.services
+		&__list
+			margin: 20px 0 20px 0
+		&__item 
+			width: 100%
+			margin: 0
+			padding: 25px 0
+			&:after 
+				display: none
+
+
+	.head-bot
+		color: #000
+		.wrapper 
+			padding: 1.4rem
+	.main-logo
+		flex-wrap: wrap
+		&__text
+			padding: 10px 0 0 0
+			width: 100%
+	.burger
+		position: absolute
+		top: 1.4rem 
+		right: 1.4rem
+		align-self: flex-start 
+		margin-top: -15px
+
+	.about-main
+		background-image: none !important
+		color: #000
+		.title__block
+			color: #000
+		.about__more
+			color: #000
+		.more__link:before
+			border-color: #000
+			background: url(../img/ico-arrow-gray.svg) no-repeat center !important
+			background-size: 38% !important
+	.specialist
+		&__item
+			margin-right: 0
+			// padding: 0
+			// background: none
+			// > div 
+			// 	padding: 40px 
+			// 	background: #fff
+		.slick-next
+			right: 0
+		.slick-prev 
+			right: 30px
+	.footer
+		&-menu__cont:nth-child(4)
+			flex-direction: row-reverse
+			flex-direction: column
+		&__search-wrap
+			width: 100%
+		.phone__link
+			display: none
+		&__copy
+			width: 100%
+			text-align: center
+		&__dev
+			width: 100%
+			display: flex
+			justify-content: center
+			margin-top: 20px
+		&__search 
+			.search__submit
+				width: 40px
+				font-size: 0
+				background: url('../img/ico-post.png') no-repeat center right 15px 
+	.gallery
+		&__list
+			margin-left: 0
+			justify-content: center
+		&__item
+			width: 100%
+			margin: 0 0 35px 0
+	.personal
+		&__list
+			margin-left: 0
+		&__item
+			width: 100%
+			margin: 0 0 30px 0
+	.btn--consultation
+		padding: 15px 20px
+	.btn--question 
+		padding: 15px 45px 15px 20px
+		color: #000
+		background: url(../img/ico-arrow-black.svg) no-repeat center right 15px, #e4e8ea
+
+	.consultation
+		&__top
+			padding-bottom: 30px
+			&:after
+				right: calc(50% - 10px)
+				left: inherit
+				top: initial
+				bottom: 5px
+	.services-inner
+		&__list
+			margin-left: 0
+		&__item
+			width: 100%
+			margin-left: 0
+			padding: 20px 0
+			margin-bottom: 0
+			&:after 
+				display: none
+	.basepage
+		&__image
+			margin-top: 0
+		&--btn
+			margin-bottom: 25px
+		&__slider
+			margin: 0
+		table
+			display: block
+			overflow: auto
+	.image
+		margin-bottom: 25px
+	.album
+		.gallery
+			&__list
+				margin-left: 0
+			&__item
+				width: 100%
+				margin: 0 0 25px 0
+	.gallery
+		.gallery
+			&__list
+				margin-left: 0
+			&__item
+				width: 100%
+				margin: 0 0 25px 0
+
+	.error
+		&__img
+			margin-bottom: 30px
+		&__title
+			font-size: 1rem
+			line-height: 1.2rem 
+			margin-bottom: 15px
+		&__text
+			font-size: 1rem
+			line-height: 1.2rem
+	.map-info
+
+		&__list
+			flex-direction: column
+		&__item 
+			border: 0
+			&:not(:first-child)
+				border-top: 1px solid $border-color
+	.transport
+		padding: 20px 0 0 0
+		margin: 20px 0 0 0
+	.foto
+		&__list
+			flex-direction: column
+			margin-left: 0
+			justify-content: center
+			align-items: center
+		&__item
+			width: 100%
+			margin-left: 0
+			margin-bottom: 25px
+			text-align: center
+	.download-file__item
+		flex-wrap: wrap
+		p 
+			text-align: center
+	.download-btn	
+		width: 100%
+		margin-top: 20px
+		justify-content: center
+	.ico-file:before
+		margin: 0 auto
+		margin-bottom: 20px
+		width: 100%
+	.ico-marker:before
+		display: none
+	.clinik-info__title
+		margin-bottom: 15px
+	.clinik-address p
+		padding: 5px 0
+	.timing__filter
+		flex-direction: column
+		margin-bottom: 45px
+		.forms-input-cont
+			max-width: 100%
+			width: 100%
+			margin: 0
+			margin-bottom: 20px
+		.forms__label
+			margin-bottom: 10px
+		.slick-prev
+			top: initial
+			bottom: -40px
+		.slick-next
+			top: initial
+			bottom: -40px
+	// .times-col__fix
+	// 	width: 130px
+	.status
+		&__list
+			flex-direction: column
+		&__item 
+			margin: 0 0 15px 0
+	.times-col__fix
+		width: 130px
+	.times__slider
+		width: calc(100% - 130px)
+	.times__slider
+		.times-col
+			border-right: 0
+	.time-block
+		height: 40px 
+		> div 
+			width: initial
+			height: initial
+			background: none
+	.title-block__cont
+		padding: 15px 0
+		margin-bottom: 20px
+
+
+	.mobile-menu--open
+		#content
+			transform: translate3d(-250px, 0,0)
+		.menu-mobile
+			.submenu
+				transform: translate3d(250px, 0,0)
+	.mobile-menu
+		width: 250px
+	.submenu-open .submenu
+		width: 250px
+
+	//формы
+	.forms 
+		height: 100% !important
+	.forms-input-cont
+		width: 100% !important
+		margin: 0
+		margin-bottom: 10px
+	.forms-wrap--bot
+		flex-direction: column
+		align-items: flex-start
+	.recaptcha
+		margin-right: 0 !important
+		margin-bottom: 20px
+	.forms-submit-cont
+		flex-direction: column-reverse
+		margin-top: 20px
+	.forms__submit
+		margin-right: 0 !important
+		margin-top: 20px
+		border-radius: 0
+	
+	.news-main 
+		.news__slider
+			margin-bottom: 20px
+			margin: 0 -1.4rem
+		.news__info
+			padding: 0 1.4rem
+		.news__img
+			img 
+				width: 100%
+		.news__more
+			margin-top: 20px
+
+	.specialist__item 
+		> div
+			display: flex
+			flex-direction: column
+			align-items: center
+	.news-main 
+		.news__title
+			margin-bottom: 15px
+	.city-area
+		padding: 30px 0
+		&__item
+			padding: 25px 0 25px 0
+		&__info
+			padding-left: 40px
+	#content	
+		overflow-x: hidden
+		z-index: 10
+		position: relative
+	.mobile-menu
+		overflow-x: hidden
+
+	.main
+		.main-logo 
+			a
+				color: #000
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: landscape)
+	.head-bot
+		color: #000
+		.wrapper 
+			padding: 0.6rem 1.4rem
+	.main-logo__text
+		padding: 0 0 0 15px
+		align-self: center
+	.services
+		padding: 30px 0
+		&__list
+			margin: 10px 0 10px -30px
+		&__item 
+			width: calc((100% - 30px * 3) / 3)
+			margin-left: 30px
+			margin-bottom: 25px
+			padding: 25px 0
+	.specialist
+		&__item
+			margin-right: 25px
+			&:after 
+				display: block
+@media screen and (max-width: 480px)
+	.block-btn
+		flex-direction: column
+	.btn--main
+		&:not(:first-child)
+			margin-top: 15px
+	.btn--consultation
+		background: url('../img/ico-fase.png') no-repeat center right 15px, #31c5bd
+		border-radius: 0
+
+@media screen and (max-width: 370px)
+	
+	
+	.basepage__image
+		display: none
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

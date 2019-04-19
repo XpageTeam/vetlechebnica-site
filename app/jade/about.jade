@@ -1,0 +1,62 @@
+html
+	head
+		meta(charset="utf-8")
+		title Отдел ВЭД
+		include inc/head.jade
+		include inc/css.jade
+	body.inner
+		#page-wr
+			.mobile-menu
+			#content
+				include inc/header-inner.jade
+				include inc/breadcrambs.jade
+				.content
+					.wrapper.wrapper-aside
+						aside.aside
+							.aside-info
+								p Челябинская ветеренарная клиника
+							
+						section.about-inner
+							.about-foto__list
+								- for (var i = 1; i <= 3; i++ )
+									each img in ["1", "2", "3"]
+										a.about-foto__item.fancybox(href="#")
+											figure.about-foto__img
+												img(src="img/photos/about-foto-"+img+".png", alt="")
+							.text-page
+								p В 2016 году более 48 тысяч клиентов выбрали наше учреждение  в качестве клиники, где они могут получить ветеринарную помощь для своих питомцев. Такое количество посетителей нас ко многому обязывает, поэтому в результате реконструкции и ремонта, проведенного в прошлом году наряду с задачами эстетического характера, мы постарались решить вопросы организации рабочего пространства и порядка осуществления амбулаторного приёма животных.
+								p Отрадно отметить, что в ушедшем году нам удалось запустить интерактивный сайт по интернет-продажам кормов, аксессуаров и атрибутов зооветеринарного назначения – zooapteka74.ru ,   заключить договор на услуги новой телефонии и организовать работу колл центра, с единым номером 214-14-14.
+								p На страницах нашего сайта Вы найдёте всю необходимую информацию о работе нашего учреждения и сможете задать интересующие Вас вопросы.
+					.city-area
+						.wrapper
+							ol.city-area__list
+								li.city-area__item
+									.city-area__info
+										.city-area__title Курчатовский район
+										.city-area__address г. Челябинск Пржевальского, 2<br> Остановка «Ветлечебница»
+										a.city-area__link(href="#") Подробнее
+								li.city-area__item
+									.city-area__info
+										.city-area__title Металлургический район
+										.city-area__address Свердловский тракт, 18а<br> Пржевальского, 2 <br> Остановка «Досуговый центр «Импульс» 
+										a.city-area__link(href="#") Подробнее
+								li.city-area__item
+									.city-area__info
+										.city-area__title Тракторозаводский район
+										.city-area__address Марченко, 7в<br> Остановка «Танкистов (ул. Кулибина)» 
+										a.city-area__link(href="#") Подробнее
+							.city-map
+								.map-interaktiv
+									//- img(src="img/map.svg", alt="")
+									include ../img/map.svg
+
+
+									
+
+
+
+
+							
+
+			include inc/footer.jade
+		include inc/scripts.jade

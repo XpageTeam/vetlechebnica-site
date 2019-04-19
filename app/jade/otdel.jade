@@ -1,0 +1,112 @@
+html
+	head
+		meta(charset="utf-8")
+		title Отдел ВЭД
+		include inc/head.jade
+		include inc/css.jade
+	body.inner
+		#page-wr
+			.mobile-menu
+			#content
+				include inc/header-inner.jade
+				include inc/breadcrambs.jade
+				.content
+					.wrapper.wrapper-aside
+						aside.aside
+							.price
+								p Задачи отдела ветеринарно-санитарной экспертизы
+								.price-btn
+									a.btn.btn--price(href="#") Скачать прейскурант
+							
+						section.otdel
+							.text-page
+								p проведение ветеринарно-санитарной экспертизы и ветеринарно-санитарной оценки сырья, продукции животного происхождения, кормов и кормовых добавок;
+								p мониторинг ветеринарной безопасности (сбор, получение, обработка и анализ информации о соответствии находящейся в производстве и обращении сырья, продукции животного происхождения, кормов и кормовых добавок ветеринарным требованиям);
+								p консультативные услуги по вопросам соблюдения ветеринарных требований и правил по проведению дезинфекции, дезинсекции, дератизации и иным мероприятиям  сфере ветеринарии, порядке утилизации биологических отходов, обезвреживании, уничтожении некачественной и опасной продукции животного (растительного) происхождения и другим вопросам;
+								p оформление и выдача в установленном порядке документов (в письменной форме или в форме электронного документа) на все виды животных, продукции животного происхождения, кормов и кормовых добавок, подлежащих заготовке, перевозке, переработке, хранению и реализации, характеризующие территориальное и видовое происхождение, ветеринарно-санитарное состояние груза, эпизоотическое состояние места его выхода, позволяющие идентифицировать груз.
+							.foto__list
+								- for (var i = 1; i < 2; i++)
+									each img in ["1", "2", "3"]
+										.foto__item
+											img(src="img/photos/otdel-"+img+".jpg", alt="")
+					.specialist.specialist__inner
+						.wrapper
+							h2.title__block.specialist__title Специалисты
+							.specialist__slider
+								.specislist__list
+									- for (var i = 1; i <= 6; i++)
+										a.specialist__item(href="#")
+											div
+												figure.specialist__img
+													img(src="img/specialist-img.jpg", alt="")
+												.specialist__info
+													.specialist__name Кузовлев<br> Дмитрий Николаевич
+													.specialist__prof хирург, заведующий хирургического кабинета
+							.specialist__more
+								a.more__link(href="#") Все специалисты
+					.news-main.news-inner
+						.wrapper
+							h2.title__block.news__title Новости
+							.news__slider-inner
+								.news__list-inner
+									a.news__item-inner(href="#")
+										div
+											figure.news__img
+												img(src="img/photos/news-img-1.jpg", alt="")
+											.news__info
+												.news__data 27.09.2017
+												.news__text Обнаружена мутация, сделавшая птичий грипп опасным для людей
+									a.news__item-inner(href="#")
+										div
+											figure.news__img
+												img(src="img/photos/news-img-2.jpg", alt="")
+											.news__info
+												.news__data 27.09.2017
+												.news__text Могут ли животные мстить человеку?
+									a.news__item-inner(href="#")
+										div
+											figure.news__img
+												img(src="img/photos/news-img-3.jpg", alt="")
+											.news__info
+												.news__data 27.09.2017
+												.news__text Mars открывает первый в Москве офис, куда можно приходить с домашними животными
+									a.news__item-inner(href="#")
+										div
+											figure.news__img
+												img(src="img/photos/news-img-3.jpg", alt="")
+											.news__info
+												.news__data 27.09.2017
+												.news__text Mars открывает первый в Москве офис, куда можно приходить с домашними животными
+									a.news__item-inner(href="#")
+										div
+											figure.news__img
+												img(src="img/photos/news-img-3.jpg", alt="")
+											.news__info
+												.news__data 27.09.2017
+												.news__text Mars открывает первый в Москве офис, куда можно приходить с домашними животными
+							.news__more
+								a.more__link.ico-btn(href="#") Все новости
+					.wrapper
+						.download-file
+							.download-file__list
+								each name in ["Заявление на заключение договора", "Заявление на разовую услугу", "Регламент оформления ВСД"]
+									a.download-file__item.ico-file
+										p=name
+										.download-btn
+											.btn.btn--download(href="#") Скачать
+						.clinik-info
+							.clinik-info__title.ico-marker Отдел Ветеринарно-санитарной экспертизы ОГБУ «Челябинская ветстанция»
+							address.clinik-address 
+								p 454008, г. Челябинск, Свердловский тракт, 18-А
+								p тел./факс 8(351)214-20-14 доб. 300
+								p e-mail: 83517227742@mail.ru
+
+									
+
+
+
+
+							
+
+			include inc/footer.jade
+		include inc/scripts.jade

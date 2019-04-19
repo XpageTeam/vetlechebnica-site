@@ -1,0 +1,96 @@
+header.head
+	.head-top
+		.wrapper
+			.head-top__left
+				.head-top__menu-list
+					.head-top__menu-item
+						a.head-top__menu-link(href="#") О клиники
+						.sub-menu--wrap
+							ul.sub-menu__list
+								li.sub-menu__item 
+									a.sub-menu__link(href="#") Центральный и курчатовский район
+								li.sub-menu__item 
+									a.sub-menu__link(href="#") Тракторозаводской район
+								li.sub-menu__item 
+									a.sub-menu__link(href="#") Металлургический район
+					.head-top__menu-item
+						a.head-top__menu-link(href="#") Отдел ВСЭ
+						.sub-menu--wrap
+							ul.sub-menu__list
+								li.sub-menu__item 
+									a.sub-menu__link(href="#") Новости ВСЭ
+								li.sub-menu__item 
+									a.sub-menu__link(href="#") Прейскурант ВСЭ
+								li.sub-menu__item 
+									a.sub-menu__link(href="#") Заявления и документы (страница с документами для скачивания)
+								li.sub-menu__item 
+									a.sub-menu__link(href="#") Контакты ВСЭ
+
+						
+					.head-top__menu-item
+						a.head-top__menu-link(href="#") Наши сотрудники
+					.head-top__menu-item
+						a.head-top__menu-link(href="#") Галерея
+						.sub-menu--wrap
+							ul.sub-menu__list
+								li.sub-menu__item 
+									a.sub-menu__link(href="#") Фото
+								li.sub-menu__item 
+									a.sub-menu__link(href="#") Видео
+						
+
+
+			.head-top__right
+				.head-links
+					.head-links__soc
+						each title in ["vk", "twitter", "facebook"]
+							a.soc__link(href="#" style="background-image: url('img/"+title+".svg')")
+
+					.head-links__phone
+						address.top-phone
+							a(href="tel: +7 (351) 214-14-14") +7 (351) 214-14-14
+	.head-bot
+		.wrapper
+			.head-bot__left
+				.main-logo
+					.main-logo__img 
+						img(src="img/logo-img-1.png", alt="")
+					.main-logo__img
+						img(src="img/logo-img-2.png", alt="")
+					.main-logo__text Челябинская ветстанция
+						div Областное государственное бюджетное учреждение
+			.search
+				a(href="#").ico-search
+
+			.head-bot__right
+				
+				.main-nav
+					.main-nav__list
+						.main-nav__item
+							a.main-nav__link(href="#") Наши услуги
+							.sub-menu--wrap
+								ul.sub-menu__list
+									each title in ["прейскурант", "узи", "экг", "лаборатория", "рентген","скорая помощь","хирургия","физиотерапия", "электронная идентификация животных", "терапия", "имунопрофилактика", "видеоэндоскопия", "аптека"]
+										li.sub-menu__item
+											a.sub-menu__link(href="#")=title
+						.main-nav__item
+							a.main-nav__link.active(href="#") Интернет-магазин
+						.main-nav__item
+							a.main-nav__link(href="#") Новости
+						.main-nav__item 
+							a.main-nav__link(href="#") Консультация 
+							.sub-menu--wrap
+								ul.sub-menu__list
+									li.sub-menu__item
+										a.sub-menu__link(href="#") Часто задаваемые вопросы
+						.main-nav__item
+							a.main-nav__link(href="#") Контакты
+
+			.burger
+				span
+
+	.search__input-cont
+		.wrapper
+			form(action="")
+				input.search__input(type="text")
+				input.search__submit.ico-search(type="submit")

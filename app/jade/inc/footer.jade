@@ -1,0 +1,192 @@
+footer.footer
+	nav.footer__top
+		.wrapper
+			.footer-menu__cont
+				.footer-menu__title Наши услуги
+				.footer-menu--left
+					ul.footer-menu
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Прейскурант
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Узи
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Экг
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Лаборатория
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Рентген
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Скорая помощь
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Хирургия
+					ul.footer-menu
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Физиотерапия
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Электронная индетификация животных
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Терапия
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Имунопрофилактика
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Видеоэндоскопия 
+						li.footer-menu__el
+							a.footer-menu__link(href="#") Аптека
+			.footer-menu__cont
+				.footer-menu__title Отдел ВСЭ
+				ul.footer-menu
+					li.footer-menu__el
+						a.footer-menu__link(href="#") Новости ВСЭ
+					li.footer-menu__el
+						a.footer-menu__link(href="#") Прейскурант ВСЭ
+					li.footer-menu__el
+						a.footer-menu__link(href="#") Заявления и документы
+					li.footer-menu__el
+						a.footer-menu__link(href="#") Контакты ВСЭ
+				.shop
+					a.shop__link(href="#") Интернет-магазин
+			.footer-menu__cont
+				.footer-menu__title О компании
+				ul.footer-menu.footer-menu--main
+					li.footer-menu__el
+						a.footer-menu__link(href="#") О клинике
+					li.footer-menu__el
+						a.footer-menu__link(href="#") Новости
+					li.footer-menu__el
+						a.footer-menu__link(href="#") Фотогалерея
+					li.footer-menu__el
+						a.footer-menu__link(href="#") Видеогалерея
+					li.footer-menu__el
+						a.footer-menu__link(href="#") Наши сотрудники
+					li.footer-menu__el
+						a.footer-menu__link(href="#") Консультация
+					li.footer-menu__el
+						a.footer-menu__link(href="#") Часто задаваемые вопросы
+					li.footer-menu__el
+						a.footer-menu__link(href="#") Контакты
+			.footer-spam
+				a.phone__link(href="tel:+7(351)2141414") <span> +7 (351)</span> 214-14-14
+
+				.footer__search-wrap
+					.search__label Подписывайтесь на новости и акции
+					.footer__search
+						form(action="")
+							.search
+								input.search__input(type="search" placeholder="Ваш e-mail")
+								input.search__submit(type="submit" value="Подписаться") 
+	.footer__bot
+		.wrapper
+			.footer__copy
+				.copy &copy; ОГБУ "Челябинская ветстанция" | 2007-2017
+				a.copy__link(href="#") Политика конфидециальности
+			.footer__soc
+				.soc
+					each title in ["vk", "twitter", "facebook", "instagram", "ok"]
+						.soc__item
+							a.soc__link(href="#" style="background-image: url('img/"+title+".svg')")
+			.footer__dev
+				a.dev(href="http://xpage.ru" traget="_blank")
+					span.dev__text Сделано в
+					img.dev__img(src="img/footer-logo.png", alt="")
+
+.forms#appointment
+	.forms__title Запись на приём
+	.forms-text-cont
+		.forms__text
+			p Для записи на приём, укажите ваши данные и данные питомца.<br> Ближайшая возможная дата записи - завтра.
+	form(action='#')
+	// Скрытые инпуты сюда
+	.forms-wrap
+		.forms-input-cont
+			input.forms__input(required='required', type='text')
+			label.forms__label ФИО:
+			.forms__error-message
+				i.forms__error-message-icon
+		.forms-input-cont
+			input.forms__input(required='required', type='email')
+			label.forms__label E-mail:
+			.forms__error-message
+				i.forms__error-message-icon
+		.forms-input-cont
+			input.forms__input(required='required', type='tel')
+			label.forms__label Телефон:
+			.forms__error-message
+				i.forms__error-message-icon
+		.forms-input-cont
+			input.forms__input(required='required', type='text')
+			label.forms__label Вид животного:
+			.forms__error-message
+				i.forms__error-message-icon
+		.forms-input-cont
+			select.forms__input.forms__input--select(required='required', name='', id='')
+				option(value='')
+			label.forms__label Выбор клиники:
+			.forms__error-message
+				i.forms__error-message-icon
+		.forms-input-cont
+			select.forms__input.forms__input--select(required='required', name='', id='')
+				option(value='')
+			label.forms__label Выбор услуги:
+			.forms__error-message
+				i.forms__error-message-icon
+		.forms-input-cont
+			select.forms__input.forms__input--select(required='required', name='', id='')
+				option(value='')
+			label.forms__label Выберите удобную для вас дату:
+			.forms__error-message
+				i.forms__error-message-icon
+		.forms-input-cont
+			select.forms__input.forms__input--select(required='required', name='', id='')
+				option(value='')
+			label.forms__label Выберите удобное для вас время:
+			.forms__error-message
+				i.forms__error-message-icon
+	.forms-wrap--bot
+		.recaptcha
+			img(src="img/recapcha.jpg", alt="")
+		.forms-checkbox
+			input#checkbox-1.forms__checkbox(type='checkbox')
+			label.forms__checkbox-label(for='checkbox-1') 
+				span Хочу получать новостную рассылку
+	.forms-submit-cont
+		input.forms__submit(type='submit', value='Оформить запись')
+		.forms-submit-info.text 
+			span Нажимая кнопку вы даете информированное согласие на 
+				a(href="#") обработку своих персональных данных
+
+.forms#consultation
+	.forms__title Запрос на консультацию
+	.forms-text-cont
+		.forms__text
+			p Задайте свой вопрос и мы постараемся ответить вам
+	form(action='#')
+	// Скрытые инпуты сюда
+	.forms-wrap
+		.forms-input-cont
+			input.forms__input(required='required', type='text')
+			label.forms__label ФИО:
+			.forms__error-message
+				i.forms__error-message-icon
+		.forms-input-cont
+			input.forms__input(required='required', type='email')
+			label.forms__label E-mail:
+			.forms__error-message
+				i.forms__error-message-icon
+		.forms-input-cont.forms-input-cont--textarea
+			textarea.forms__input.forms__input--textarea(required='required')
+			label.forms__label Ваш вопрос:
+			.forms__error-message
+				i.forms__error-message-icon
+		
+	.forms-wrap--bot
+		.recaptcha
+			img(src="img/recapcha.jpg", alt="")
+		.forms-checkbox
+			input#checkbox-2.forms__checkbox(type='checkbox')
+			label.forms__checkbox-label(for='checkbox-2') 
+				span Хочу получать новостную рассылку
+	.forms-submit-cont
+		input.forms__submit(type='submit', value='Оформить запись')
+		.forms-submit-info.text 
+			span Нажимая кнопку вы даете информированное согласие на 
+				a(href="#") обработку своих персональных данных
