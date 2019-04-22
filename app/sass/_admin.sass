@@ -1,4 +1,8 @@
 .admin
+
+	.main-nav__link
+		padding: 27px 15px
+
 	&.main
 		.head
 			position: relative
@@ -28,4 +32,75 @@
 
 				.wrapper
 					margin-top: 50px
+
+@media screen and (max-width: 1300px)
+	.admin 
+		.main-nav__link
+			padding: 22px 12px
+
+		.head-special__top
+			padding: 20px 0 10px
+
+
+@media screen and (max-width: 1200px)
+
+	.admin
+		.head
+
+			&-bot
+				display: none
+
+			&-top
+				display: block
+				border: 0
+
+
+				&--right
+					display: none
+
+@media screen and (max-width: 1000px)
+
+	.admin
+		.head
+			padding: 20px 0
+
+			&-top
+				display: block
+				border: 0
+
+				.new
+
+				&--right
+					display: none
+
+		.help-cont
+
+			.help__list
+				display: none
+
+		.burger
+			margin: -15px
+
+
+		.main-slider__cont
+			height: auto
+
+	.head-bot.new
+		display: none
+
+@media screen and (max-width: 660px)
+
+	.admin 
+		.main-slider__slide-img
+			height: auto
+
+		.main-slider__slide-title-cont 
+			align-items: center
+
+			.wrapper
+				margin-top: 0
+
+		.main-slider__slide-title
+			font-size: 1.5rem
+			line-height: 1.7rem
 
