@@ -19,6 +19,9 @@ $output-bourbon-deprecation-warnings: false;
 			object-fit: cover 
 			object-position: center
 
+		&-title-cont .wrapper
+			height: calc(100% - 106px - 4.35714%)
+
 	.header-slider
 		margin-right: 75px
 
@@ -164,8 +167,8 @@ $output-bourbon-deprecation-warnings: false;
 	// 	font-size: 2rem
 	// 	line-height: 1
 
-	.main-slider__slide img
-		min-height: calc(100vh - 20vh)
+	// .main-slider__slide img
+	// 	min-height: calc(100vh - 20vh)
 
 	.main-slider__slide-title
 		max-width: 70%
@@ -309,8 +312,8 @@ $output-bourbon-deprecation-warnings: false;
 			content: ""
 			position: absolute
 			right: 1.4rem
-			top: calc(50% - 10px)
-			+size(20px)
+			top: calc(50% - 5px)
+			+size(10px)
 			background: url('../img/ico-arrow-gray.svg') no-repeat center
 			background-size: contain !important
 	.shop.js__shop,
@@ -344,7 +347,7 @@ $output-bourbon-deprecation-warnings: false;
 				display: none
 			&:after
 				opacity: 1
-				width: 30px
+				width: 24px
 				left: 15px 
 
 
@@ -507,6 +510,16 @@ $output-bourbon-deprecation-warnings: false;
 
 
 
+
+@media screen and (max-width: 1000px)
+	.main-slider__slide-img
+		max-height: 500px
+
+	.main-slider__slide-title-cont .wrapper
+		height: 100%
+
+	.head-top
+		padding: 0
 
 @media screen and (max-width: 820px)
 	html 
@@ -683,6 +696,13 @@ $output-bourbon-deprecation-warnings: false;
 
 	.head-special-cont
 		display: none
+
+	.main-slider__slide-title-cont .wrapper
+		height: 100%
+
+	.head-top
+		padding: 0
+
 
 
 	html 

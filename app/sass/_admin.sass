@@ -1,106 +1,104 @@
-.admin
+// .admin
 
-	.main-nav__link
-		padding: 27px 15px
+.main-nav__link
+	padding: 27px 15px
 
-	&.main
-		.head
-			position: relative
+&.main
+	.head
+		position: relative
 
-			.search__input-cont
-				position: absolute
+		.search__input-cont
+			position: absolute
 
-	.main-slider
+.main-slider
 
-		&__cont
-			height: calc(100vh - 180px)
+	&__cont
+		height: calc(100vh - 180px)
 
-		&__slide
-			&-img
-				height: 100%
-				width: 100%
-				object-fit: cover
-				object-position: center
+	&__slide
+		&-img
+			height: 100%
+			width: 100%
+			object-fit: cover
+			object-position: center
 
 
-		&__slide-title
-			max-width: 800px
+	&__slide-title
+		max-width: 800px
 
-			&-cont
-				margin-top: 0
-				align-items: flex-start
+		&-cont
+			margin-top: 0
+			align-items: flex-start
 
-				.wrapper
-					margin-top: 50px
 
 @media screen and (max-width: 1300px)
-	.admin 
-		.main-nav__link
-			padding: 22px 12px
+	// .admin 
+	.main-nav__link
+		padding: 22px 12px
 
-		.head-special__top
-			padding: 20px 0 10px
+	.head-special__top
+		padding: 20px 0 10px
 
 
 @media screen and (max-width: 1200px)
 
-	.admin
-		.head
+	// .admin
+	.head
 
-			&-bot
+		&-bot
+			display: none
+
+		&-top
+			display: block
+			border: 0
+
+
+			&--right
 				display: none
-
-			&-top
-				display: block
-				border: 0
-
-
-				&--right
-					display: none
 
 @media screen and (max-width: 1000px)
 
-	.admin
-		.head
-			padding: 20px 0
+	// .admin
+	.head
+		padding: 20px 0
 
-			&-top
-				display: block
-				border: 0
+		&-top
+			display: block
+			border: 0
 
-				.new
+			.new
 
-				&--right
-					display: none
-
-		.help-cont
-
-			.help__list
+			&--right
 				display: none
 
-		.burger
-			margin: -15px
+	.help-cont
+
+		.help__list
+			display: none
+
+	.burger
+		margin: -15px
 
 
-		.main-slider__cont
-			height: auto
+	.main-slider__cont
+		height: auto
 
 	.head-bot.new
 		display: none
 
 @media screen and (max-width: 660px)
 
-	.admin 
-		.main-slider__slide-img
-			height: auto
+	// .admin 
+	.main-slider__slide-img
+		height: auto
 
-		.main-slider__slide-title-cont 
-			align-items: center
+	.main-slider__slide-title-cont 
+		align-items: center
 
-			.wrapper
-				margin-top: 0
+		.wrapper
+			margin-top: 0
 
-		.main-slider__slide-title
-			font-size: 1.5rem
-			line-height: 1.7rem
+	.main-slider__slide-title
+		font-size: 1.5rem
+		line-height: 1.7rem
 

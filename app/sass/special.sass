@@ -348,16 +348,24 @@ body
 	display: flex 
 	flex-direction: column
 
+	&-links
+		display: none
+
 	&-special-cont
 		order: 2
 
 	&-top 
 		order: 4
-		display: none
+		// display: none
 
 	&-bot 
-		order: 3
+		order: 4
 		margin-top: 30px
+
+		&__right
+			display: flex 
+			flex-wrap: wrap
+			margin-left: -20px
 
 	&-top__menu
 
@@ -378,9 +386,12 @@ body
 
 	.main-nav
 		&__item
-			width: calc((100% - 20px * 6) / 6)
+			width: calc((100% - 20px * 4) / 4)
 			flex: 1 1 auto
-			margin: 0 0 0 20px
+			margin: 0 0 20px 20px
+
+			&:nth-child(6)
+				display: none
 
 		&__link
 			font-size: rem(18)
@@ -407,8 +418,8 @@ body
 
 
 .main-nav__item
-	&:not(.js__has-submenu)
-		display: none
+	// &:not(.js__has-submenu)
+	// 	display: none
 
 .one-links
 	.main-nav__item
@@ -446,7 +457,7 @@ body
 		margin-top: 50px
 
 	&__item
-		font-size: rem(30)
+		font-size: rem(25)
 		font-weight: bold
 		display: inline-block
 
