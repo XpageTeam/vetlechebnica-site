@@ -29,9 +29,35 @@ $output-bourbon-deprecation-warnings: false;
 		bottom: 4.35714%
 
 @media screen and (max-width: 1400px)
+
+	.map-info__item
+		margin-right: 0
+
+	.triangle
+		display: none
+
+	.map-info__item.active
+		.map-info__title
+			color: $main-color
+
+
+	.contacts-description
+		font-size: 1.7rem
+		line-height: 2.5rem
+		margin-top: 25px
+
+	.map-info__contacts
+		display: flex 
+		flex-direction: column
+		align-items: flex-start
+
+	.main-nav__link
+		padding: 27px 10px
+
 	.main-slider__slide-title
 		font-size: 2.75rem
 		line-height: 3.3125rem
+
 	.help__item
 		padding-left: 90px
 		&:before
@@ -42,48 +68,63 @@ $output-bourbon-deprecation-warnings: false;
 			content: ""
 			width: 60px
 			background-size: contain !important
+
 	.services
 		background: #31c5bd
 		padding: 80px 0
 		&__list
 			margin: 45px 0 20px -98px
+
 	.about-main
 		padding: 80px 0
+
 	.about__more
 		padding: 40px 0 0 0
+
 	.specialist
 		padding: 80px 0
+
 		&__item
 			margin-right: 50px
+
 		&__title
 			margin-bottom: 54px
+
 		.slick-next
 			right: 50px
+
 		.slick-prev
 			right: 80px
 		
 	.news-main
 		padding: 80px 0
+
 		.news
 			&__title
 				margin-bottom: 45px
+
 			&__list 
 				margin-right: -50px
+
 			&__item
 				margin-right: 50px
 			
 	.city-area
 		padding: 80px 0
+
 	.head-bot__left
 		width: 35%
+
 	.head-bot__right
 		width: auto
+
 	.head 
 		.search
 			margin-left: auto
 			width: auto
 		.search__input-cont
 			position: absolute
+
 	.main-slider__slide-title-cont
 		margin-top: 0
 	.title-block__cont
@@ -153,6 +194,14 @@ $output-bourbon-deprecation-warnings: false;
 			margin-right: -60px
 
 
+
+@media screen and (max-width: 1300px)
+	
+	.inner .search a
+		margin-right: 0
+
+	.main-nav__link
+		padding: 27px 0px
 
 @media screen and (max-width: 1200px)
 
@@ -540,8 +589,10 @@ $output-bourbon-deprecation-warnings: false;
 
 	.wrapper
 		padding: 0 1.4rem
+
 	.head-top
-		display: none
+		// display: none
+
 	.main-slider__slide-title
 		font-size: 1.75rem
 		line-height: 2.3125rem
@@ -570,7 +621,7 @@ $output-bourbon-deprecation-warnings: false;
 		&__list
 			margin: 20px 0 20px -50px
 		&__item 
-			width: calc((100% - 50px * 3) / 3)
+			width: calc((100% - 50px * 2) / 2)
 			margin-left: 50px
 			margin-bottom: 25px
 			padding: 25px 0
@@ -688,11 +739,20 @@ $output-bourbon-deprecation-warnings: false;
 		margin-bottom: 20px
 
 
+	.map
+		#map
+			height: 300px !important
 
 
 
 
 @media screen and (max-width: 667px)
+
+	.map
+		margin: -20px 0 0 0
+
+	.title-block__cont
+		// margin-bottom: 0 !important
 
 	.head-special-cont
 		display: none
