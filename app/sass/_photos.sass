@@ -1,0 +1,170 @@
+@import "_photos-raiting"
+
+.photos
+
+	&__btns
+		margin: 0 0 50px
+		overflow-x: auto
+
+		.btn
+			display: inline-block
+
+			&:not(:last-child)
+				margin-right: 20px
+
+.photos-item
+
+	&__img
+		margin: 0 0 20px
+		display: block
+
+		img
+			display: block
+			width: 100%
+
+	&:hover, &:focus-within
+
+		.photos-item__counter-btn
+			opacity: 1
+			pointer-events: auto		
+
+	&__title
+		font-size: rem(18)
+		margin: 0 0 10px
+
+	&__author
+		font-size: rem(16)
+		margin: 0 0 10px
+
+	&__counter
+		position: relative
+
+		&-text
+			font-size: rem(14)
+			position: absolute
+			left: 0
+			top: calc(50% - 0.4rem)
+
+		&-btn
+			position: relative
+			z-index: 1
+			transition: opacity .3s ease
+			opacity: 0
+			pointer-events: none
+
+.btn
+	
+	&--small
+		background: $main-color
+		display: inline-block
+		padding: 10px 10px 12px
+
+
+.fancybox-type-image
+
+	.fancybox-close
+		top: 0
+		right: 0
+		background: url("../img/ico-close-white.svg") center no-repeat, $main-color
+
+	@media (max-width: 667px)
+		.fancybox-inner
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+			.fancybox-image
+				height: auto
+		
+		.fancybox-title-float-wrap
+			margin: 0
+			right: auto
+			left: 0
+			width: 100%
+			text-align: left
+
+			.child
+				white-space: pre-wrap
+				border-radius: 0
+				margin: 0 !important
+
+.fancybox-nav
+
+	span
+		background: $main-color
+		
+		&:before
+			content: ""
+			position: absolute
+			+size(10px)
+			border:
+				top: 1px solid #fff
+				right: 1px solid #fff
+			top: calc(50% - 5px)
+			left: calc(50% - 7px)
+			transform: rotateZ(45deg)
+
+	&.fancybox
+
+		&-prev
+
+			span
+				left: 0
+				transform: rotateZ(180deg)
+
+		&-next
+
+			span
+				right: 0
+
+
+@media (min-width: 660px)
+	.photos-list
+		display: flex
+		flex-wrap: wrap
+
+@media (min-width: 1400px)
+	.photos-list
+		margin: 0 0 -30px -30px
+
+		&__item
+			width: calc((100% - 30px * 4) / 4)
+			margin: 0 0 30px 30px
+
+@media (max-width: 1400px) and (min-width: 1000px)
+	.photos-list
+		margin: 0 0 -20px -20px
+
+		&__item
+			width: calc((100% - 20px * 3) / 3)
+			margin: 0 0 20px 20px
+
+@media (max-width: 1000px)
+	.photos-item__counter
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		&-text
+			position: static
+		
+		&-btn
+			opacity: 1
+			pointer-events: all
+
+@media (max-width: 1000px) and (min-width: 660px)
+	.photos-list
+		margin: 0 0 -20px -20px
+
+		&__item
+			width: calc((100% - 20px * 2) / 2)
+			margin: 0 0 20px 20px
+
+@media (max-width: 660px)
+	.photos-list
+
+		&__item
+
+			&:not(:first-child)
+				margin: 35px 0 0
