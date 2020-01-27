@@ -1,0 +1,1085 @@
+:root
+	--input-hor-spacing: 49px
+	--input-vert-spacing: 25px
+
+	--input-padding: 17px 20px
+	--select-padding: 17px 30px 17px 20px
+
+.page-personal
+	.lc-nav-cont
+		+ .wrapper
+			a
+
+				border-bottom: 1px solid currentColor
+.lc-exit
+	display: flex
+	align-items: center
+	position: relative
+	margin-left: auto
+	display: inline-block
+	border: 1px solid $border-color
+	padding: 16px 18px
+	border-radius: 5px
+	line-height: 1
+
+	&:before
+		content: ''
+		position: relative
+		display: inline-block
+		size: 14px 13px
+		background-image: url('../img/ico-exit.svg')
+		background-repeat: no-repeat
+		background-position: 50%
+		background-size: contain
+		margin-right: 13px
+		margin-bottom: -1px
+
+.lc-nav
+
+	&-cont
+		background-color: var(--thrid-color)
+		margin-bottom: 50px
+
+	&__list
+		display: flex
+
+	&__link
+		flex: 1 1 auto
+		text-align: center
+		line-height: 1
+		padding: 30px 20px
+		transition: background .3s ease, color .3s ease, box-shadow .3s ease
+		border-radius: 5px
+		color: #000
+		text-decoration: none
+		font-weight: bold
+		font-size: em(12)
+		letter-spacing: 0.08em
+		text-transform: uppercase
+
+		&.active, &:hover
+			background-color: $main-color
+			border-radius: 5px
+			color: #fff
+
+
+
+.lc-data
+
+	.form__inputs
+		margin-bottom: 25px !important
+
+	&__title
+		position: relative
+		padding: 50px 0 25px
+		font-size: rem(20)
+
+	&-cont
+		+ .lc-data-cont
+			border-top: 1px solid $border-color
+			margin-top: 50px
+
+
+
+
+
+.lc-order
+
+	&__nav
+		display: inline-block
+
+		&-cont
+			display: flex
+			margin: 50px 0
+
+			.wrapper
+				width: 100%
+
+		&-link
+			position: relative
+			display: inline-block
+			border-radius: 5px
+			padding: 20px 29px
+			line-height: 1
+			transition: background .3s ease
+			background-color: var(--thrid-color)
+			margin-right: 15px
+
+			font-weight: bold
+			font-size: em(10)
+			letter-spacing: 0.08em
+			text-transform: uppercase
+
+
+
+			&.active, &:hover
+				background-color: $second-color
+				color: #fff
+
+	
+
+	&__item
+
+		&-top
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			&-cont
+				background-color: var(--thrid-color)
+				padding: 25px 0
+
+		&-bot
+
+			&-cont
+				display: none
+
+		&-title
+			font-size: rem(18)
+			font-weight: 500
+
+		&-date
+			border-radius: 5px
+			padding: 11px 25px
+			margin-left: 33px
+			border: 1px solid #CDD5E0
+			line-height: 1
+			font-size: em(14)
+			letter-spacing: 0.02em
+			color: #B7BFCA
+
+		&-status
+			margin: 0 auto
+			font-weight: 500
+
+
+		&-repeat
+			border-radius: 5px
+			border: 1px solid #CDD5E0
+			line-height: 1
+			padding: 11px 25px
+			margin-left: 20px
+			letter-spacing: 0.02em
+			cursor: pointer
+			text-align: center
+			user-select: none
+			min-width: 140px
+
+		&-cancel
+			size: 39px
+			border-radius: 5px
+			background-image: url('../img/ico-close.svg')
+			background-repeat: no-repeat
+			background-position: center
+			background-repeat: no-repeat
+			margin-left: 25px
+
+		&-info
+			padding: 30px 0 55px
+			max-width: 620px
+
+
+.lc-order__info-table
+	width: 100%
+
+	td
+		vertical-align: middle
+
+	tr
+
+		position: relative
+		background-image: url('../img/ico-line-fade.svg')
+		background-repeat: no-repeat
+		background-position: center bottom
+
+		&:last-child
+			background-image: none
+
+		&:first-child
+			td
+				padding: 20px 0
+
+		&:not(:first-child)
+			td
+				padding: 30px 0
+
+		&:not(:last-child)
+			.lc-order__info-info
+
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					bottom: -30px
+					left: 50%
+					width: 300vw
+					transform: translate3d(-50%,0,0)
+					height: 1px
+					background-color: var(--border-color)
+.lc-order
+
+	&__empty
+		font-size: rem(18)
+
+
+	&__info
+
+		&-info
+			position: relative
+			display: flex
+			max-width: 400px
+			align-items: center
+
+
+
+
+		&-subtitle
+
+			td
+				font-size: rem(14)
+
+				letter-spacing: 0.02em
+				color: rgba(0, 0, 0, 0.4)
+
+		&-img
+			width: 55px
+			display: inline-block
+			text-align: center
+			margin-right: 27px
+			flex: none
+
+		&-name
+			font-size: rem(16)
+			font-weight: 500
+
+		&-price
+			display: flex
+			align-items: center
+
+
+		&-count
+			border-radius: 5px
+			border: 1px solid var(--border-color)
+			padding: 10px 23px
+			display: inline-block
+			line-height: 1
+
+
+
+	&__price
+		display: flex
+		align-items: flex-end
+
+		&-current
+			font-weight: 500
+			font-size: em(18)
+			letter-spacing: 0.02em
+
+			color: #393939
+
+		.price
+			font-weight: 500
+			font-size: em(18)
+			letter-spacing: 0.02em
+
+			color: #393939
+			line-height: 1
+
+
+			&--old
+				font-size: em(16)
+				letter-spacing: 0.02em
+				text-decoration-line: line-through
+
+				color: #A3A0A0
+				line-height: 1
+				margin-left: 10px
+
+
+
+
+.status
+	position: relative
+	display: flex
+	align-items: center
+
+	&:before
+		content: ''
+		display: inline-block
+		+size(31px 22px)
+		background-repeat: no-repeat
+		background-position: center
+		background-repeat: no-repeat
+		margin-right: 15px
+
+	&--take
+		&:before
+			background-image: url('../img/ico-take.svg')
+	&--сonfirmed
+		&:before
+			background-image: url('../img/ico-confirmed.svg')
+	&--delivered
+		&:before
+			background-image: url('../img/ico-delivered.svg')
+	&--by-order
+		&:before
+			background-image: url('../img/ico-by-order.svg')
+	&--cancel
+		&:before
+			background-image: url('../img/ico-order-cancel.svg')
+	&--prepaid
+		&:before
+			background-image: url('../img/ico-prepaid.svg')
+
+
+.lc-favorite
+	&-cont
+		.cart-btns-cont
+			margin-top: 80px
+
+		.cart-count
+			display: flex
+
+	.cart-table
+		tr
+			&:last-child
+				border: 0
+
+
+.lc-registration
+	display: flex
+
+	&__soc
+		display: flex
+		align-items: center
+		margin-bottom: 35px
+
+
+	.soc
+		margin-right: 22px
+
+		&__link
+			background-color: var(--thrid-color)
+
+	&--left
+		width: 100%
+
+
+	&__news
+		width: calc(100% - 370px - 160px)
+		margin-left: 160px
+		flex: none
+
+	.form__submit
+		margin-top: 35px
+		flex-direction: column
+
+		&-text
+			margin-top: 35px
+
+
+@media screen and (max-width: 1500px)
+	
+	.lc-nav
+		&__link
+			padding: 20px 15px
+
+	.lc-data__title
+		padding: 30px 0 25px
+		margin-top: 30px
+
+
+@media screen and (max-width: 1400px)
+	
+	.bonus-stage
+		margin-top: 45px
+
+		&__list
+			margin: 0 0 -25px -25px
+
+		&__item
+			width: calc((100% - 25px * 3)/3)
+			margin: 0 0 25px 25px
+
+		&__title
+			font-size: 1.5rem
+			margin-bottom: 25px
+
+
+
+
+
+@media screen and (max-width: 1200px)
+	
+	.lc-data 
+		.forms__input-cont
+			&:empty
+				display: none
+
+		.forms__input-cont
+			margin: 0 0 25px 40px
+			width: calc((100% - 160px)/2)
+
+		.forms-bot
+			margin-top: 30px
+
+	.bonus-stage__item
+		padding: 20px
+
+		&-title
+			font-size: 1rem
+			margin-bottom: 15px
+
+		&-text
+			margin-bottom: 30px
+
+	
+	.bonus-input__cont
+		input[type=text]
+			padding: 0 40px 0 15px
+
+		input[type=submit]
+			width: 40px
+
+	.lc-registration__news
+		width: calc(100% - 450px)
+		margin-left: 30px
+
+
+
+@media screen and (max-width: 1000px)
+
+	
+	.lc-data
+		margin-top: 45px
+
+
+		.forms__input-cont
+			margin: 0 0 25px 40px
+			width: calc((100% - 40px * 2)/2)
+
+
+
+	.lc-order__item-top
+		flex-wrap: wrap
+
+		.lc-order__item
+			&-title
+				width: 100%
+				margin-bottom: 15px
+
+			&-date
+				margin-left: 0
+				padding: 10px
+				line-height: 1
+
+			&-address
+				margin-right: 0
+				margin-bottom: 15px
+
+
+			&-repeat
+				padding: 10px 15px
+
+			&-status
+				margin-left: 0
+				width: calc(100% - 300px)
+
+			&-cancel
+				width: 36px
+				height: 36px
+
+	.lc-order__item-info
+		padding: 20px 0 30px
+
+	.bonus-stage__item
+		width: calc((100% - 25px * 2)/2)
+		margin: 0 0 25px 25px
+
+	.lc-order__item
+		&-top
+			position: relative
+
+		&-cancel
+			position: absolute
+			top: 0
+			right: 0
+
+		&-repeat
+			margin: 20px 0 0 0
+
+	.lc-order__price
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+		.price--old
+			margin: 5px 0 0 0
+
+	.lc-order__info-info
+		max-width: 255px
+
+	.lc-registration__news
+		width: calc(100% - 300px)
+
+
+@media screen and (max-width: 667px)
+
+
+
+
+	.bonus-stage__item
+		width: 100%
+		margin: 0 0 25px 25px
+
+
+	
+	.lc-data
+		margin-top: 25px
+
+
+		.forms__input-cont
+			margin: 0 0 25px 40px
+			width: 100%
+
+		&-cont+.lc-data-cont
+			margin-top: 25px
+
+			.lc-data
+				margin-top: 0 !important
+
+				&__title
+					padding: 30px 0 25px
+					margin-top: 0
+
+
+	.lc-nav
+
+
+		&-cont
+
+			background-color: #fff
+
+			.wrapper
+				padding: 0
+
+		&__list
+			overflow-x: auto
+			padding-bottom: 15px
+			background-color: #fff
+			padding-left: 20px
+
+			scroll-snap-type: mandatory
+			-webkit-overflow-scrolling: touch
+
+		&__link
+			white-space: nowrap
+			background-color: var(--background-color)
+			border-radius: 5px
+			flex: none
+			padding: 10px 20px
+			scroll-snap-align: start
+			scroll-snap-points-x: repeat(50%)
+			border: 1px solid var(--border-color)
+
+			&:not(.active)
+				&:hover
+					background-color: var(--background-color)
+					color: #000
+					box-shadow: none
+
+
+			&:not(:last-child)
+				margin-right: 15px
+
+			&.active
+				box-shadow: none
+
+
+	.lc-order__nav
+		display: flex
+		flex-direction: column
+
+		&-link
+			padding: 14px 10px
+			flex: 1 1 auto
+			justify-content: center
+			text-align: center
+			border: 0
+			margin-right: 0
+
+			&:after
+				display: none
+
+
+	.lc-order__item-top 
+		.lc-order__item
+			&-title
+				width: 50%
+				margin-bottom: 0
+				font-size: 14px
+
+			&-address
+				margin: 15px 0 15px 0
+				width: 100%
+
+			&-repeat
+				margin-left: 0
+
+			&-status
+				width: 100%
+				margin-bottom: 15px
+
+
+	.lc-order__info
+		&-table
+			tbody, tr, td
+				display: block
+
+
+
+			tr
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+				align-items: center
+
+				&:not(:first-child) td
+					padding: 10px 0
+
+			.lc-order__price
+				flex-direction: column
+
+				&-last
+					margin-left: 0
+
+					.price
+						font-size: 15px
+
+
+			.price
+				font-size: 17px
+
+		&-count
+			padding: 10px
+
+		&-subtitle
+			display: none !important
+
+	.lc-order__nav-cont
+		margin: 0 0 20px
+
+	.lc-nav-cont
+		margin-bottom: 10px
+
+	.lc-order__item-cancel
+		top: -30px
+		right: -10px
+
+	.status:before
+		height: 23px
+
+	.lc-order__info-info
+		max-width: 100%
+
+	.lc-order__info-table tr:not(:last-child) .lc-order__info-info:after
+		display: none
+
+	.lc-registration
+		flex-direction: column
+
+		&__news
+			width: 100%
+			margin: 20px 0 0 0
+
+	.lc-registration .form__submit-text
+		margin-top: 10px
+
+	.lc-exit
+		padding: 10px 15px
+
+
+@media (max-width: 370px)
+	
+	.lc-order__item-repeat
+		min-width: 100px
+
+
+
+
+.default-input
+	position: relative
+
+	&:not(.default-input--checkbox)
+		display: flex
+		flex-direction: column-reverse
+		position: relative
+		justify-content: space-between
+		flex: 1 1 auto
+
+	&__error
+		transition: opacity .3s ease
+		user-select: none
+		font-size: 12px
+		position: absolute
+		right: 0
+		bottom: -32px
+		opacity: 0
+		pointer-events: none
+		padding: 5px
+		background-color: #fff
+		border-radius: 5px		
+
+	&__input
+		border-radius: 0
+		border: 1px solid transparent
+		border-color: $border-color
+		color: #000 transparent
+		width: 100%
+		transition: border-color .3s ease
+		border-radius: 5px
+
+		&:not(&--select)
+			padding: var(--input-padding)
+
+		&:not(.default-input__input--textarea)
+			max-height: 57px
+
+		&.error
+			background-color: #FFE6E6
+			border-color: #E74E40 !important
+			color: #E74E40
+
+			~ .default-input__error
+				opacity: 1
+
+
+		&--error:not(:valid), &.error:not(:valid), &.forms__input_error:not(:valid)
+			border-color: #E74E40
+
+			~ .default-input__error
+				opacity: 1
+
+			&:focus
+
+				~ .default-input__error
+					opacity: 0
+
+
+
+
+		&--select
+			padding: var(--select-padding)
+			background-image: url("../img/ico-select-arrow.svg")
+			background-repeat: no-repeat
+			background-position: right 19px center
+			position: relative
+			cursor: pointer
+
+			option
+				color: #000
+
+			&:focus, &.js__opened
+				z-index: 2
+				border-radius: 3px 3px 0 0
+
+			&.js__opened
+
+				~ .my-select
+
+					&__list
+
+						&-cont
+							display: block
+
+		&--file
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+			+size(1px)
+			overflow: hidden
+			pointer-events: none
+
+			~ .default-input__label
+				position: static !important
+				transform: none !important
+				pointer-events: all !important
+				cursor: pointer
+
+		&:focus, &.js__opened
+			border-bottom-color: var(--main-color)
+
+
+		&[readonly]
+			cursor: default
+
+
+		&[required]
+
+			~ label
+
+				&:after
+					content: '*'
+					color: $second-color
+					margin-left: 5px
+
+
+		&--textarea
+			min-width: 100%
+			max-width: 100%
+			// width: 100% !important
+			max-height: 40vh
+			min-height: 124px
+			flex: 1 1 auto
+			resize: none
+	
+			
+
+	&__label
+		margin-bottom: 10px
+
+		&--file
+			position: relative
+			display: flex
+			align-items: center
+
+			&:before
+				content: ""
+				display: inline-block
+				border-radius: 5px
+				+size(40px)
+				flex: none
+				border: 1px solid $second-color
+				transition: background .3s ease
+				background-image: url("../img/ico-file.svg") 
+				background-position: center 
+				background-repeat: no-repeat
+				background-color: $second-color
+				position: absolute
+				right: 5px
+				bottom: 5px
+				cursor: pointer
+
+
+			~ .default-input__error
+				top: auto
+				bottom: 0
+
+	&--checkbox
+		margin-bottom: 30px
+
+		&:not(:last-child)
+			margin-bottom: 20px
+
+		input
+			&:checked
+				~ label
+					&:after
+						opacity: 1
+
+		label
+			position: relative
+			padding-left: 40px
+			display: inline-block
+			cursor: pointer
+
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				top: -7px
+				+size(26px)
+				border-radius: 5px
+				border: 1px solid $border-color
+				background-color: #fff
+
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				left: 11px
+				+size(6px 8px)
+				border-right: 1px solid $second-color
+				border-bottom: 1px solid $second-color
+				transform: rotate(45deg)
+				opacity: 0
+
+
+
+@supports (display: grid)
+	.form__inputs
+		margin: 0 !important
+		display: grid
+		grid-gap: var(--input-vert-spacing) var(--input-hor-spacing)
+
+		&--2
+			grid-template-columns: repeat(2, 1fr)
+
+		&--3
+			grid-template-columns: repeat(3, 1fr)
+
+		&--4
+			grid-template-columns: repeat(4, 1fr)
+
+		&-input
+			width: auto !important
+			margin: 0 !important
+
+			&--2
+				grid-column: span 2
+
+			&--3
+				grid-column: span 3
+
+			&--4
+				grid-column: span 4
+
+
+
+input.default-btn
+	height: 50px
+
+.default-btn
+	padding: 18px 32px
+	display: inline-block
+	border: none
+	border-radius: 5px
+	transition: background-color .3s ease, color .3s ease, border-color .3s ease
+	cursor: pointer
+	text-transform: uppercase
+	font-size: em(12)
+	white-space: nowrap
+	text-transform: none
+	font-size: em(14)
+	padding: 11px 17px
+	color: #fff 
+	background: $second-color
+	display: flex
+	align-items: center
+
+	span
+		display: flex
+		margin-right: 15px
+
+	&:hover &.active
+		border-color: transparent
+		color: #fff
+
+	&--cart
+		display: flex
+		align-items: center
+		font-weight: bold
+		line-height: 1
+		padding: 16px 32px
+
+		&:empty
+			padding: 16px 20px
+
+			&:before
+				margin-right: 0
+		
+		&:before
+			content: ''
+			display: block
+			size: 22px 18px
+			flex: none
+			background-image: url('../img/ico-cart-btn.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+			background-size: contain
+			margin-right: 12px
+			filter: invert(0)
+
+		&:hover
+			background-color: #d02121
+
+	&--view
+		display: flex
+		font-weight: bold
+		padding: 14px 32px
+		
+		&:before
+			content: ''
+			display: block
+			size: 25px 17px
+			flex: none
+			background-image: url('../img/ico-view.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+			background-size: contain
+			margin-right: 12px
+			filter: invert(0)
+
+	&--stroke
+		background-color: #fff
+		border: 1px solid $border-color
+		border-radius: 5px
+		display: flex
+
+		color: #000
+
+		&:hover
+			border-color: $second-color
+
+	&--white
+		color: #000
+		background-color: #fff
+		border: 1px solid $border-color
+
+		&:hover
+			border-color: $second-color
+
+	&--arrow
+		display: inline-block
+		size: 50px
+		border-radius: 5px
+		background-color: var(--thrid-color)
+		background-image: url('../img/ico-arrow-right.svg')
+		background-repeat: no-repeat
+		background-position: 50%
+
+	&--gray
+		background-color: var(--thrid-color)
+		color: #000
+
+
+
+@media (max-width: 1000px)
+
+	.form__inputs
+		--input-vert-spacing: 20px
+		--input-hor-spacing: 20px
+
+	.default-input--checkbox 
+		label
+			&:before
+				top: -3px
+
+			&:after
+				top: 5px
+
+@media (max-width: 660px)
+
+
+	.form	
+
+		&__inputs
+			grid-template-columns: 1fr
+			--input-vert-spacing: 20px
+
+			&-input
+				grid-column: 1
+
+		&__submit
+			display: block
+			align-items: flex-start
+
+			&-btn
+				margin-right: 0
+
+			&-text
+				margin: 40px 0 0
+				font-size: 13px
