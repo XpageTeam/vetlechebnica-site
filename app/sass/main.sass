@@ -2439,8 +2439,11 @@ $output-bourbon-deprecation-warnings: false
 .aside__photos
 	display: flex
 	flex-direction: column
-	margin-top: 30px
+	margin-top: 145px
+	@media(max-width: 1024px)
+		margin-top: 75px
 	@media(max-width: 820px)
+		margin-top: 40px
 		display: none
 		margin-bottom: 30px
 		flex-direction: row
@@ -2450,6 +2453,17 @@ $output-bourbon-deprecation-warnings: false
 			margin-bottom: 20px
 			@media(max-width: 820px)
 				margin-right: 30px
+.aside__photos-mob
+	display: flex
+	flex-wrap: wrap
+	margin-top: 40px
+	
+	@media(min-width: 820px)
+		display: none
+	& a
+		&:not(:last-of-type)
+			margin-bottom: 20px
+			margin-right: 30px
 
 @import "_admin.sass"
 @import "_photos"
