@@ -13,14 +13,17 @@
 .main-slider
 
 	&__cont
-		height: calc(100vh - 180px)
+		//height: calc(100vh - 180px)
 
 	&__slide
 		&-img
-			height: 100%
+			//height: 100%
+			
 			width: 100%
 			object-fit: cover
 			object-position: center
+			@media (min-width: 1920px)
+				max-height: calc(100vh - 180px)
 
 
 	&__slide-title

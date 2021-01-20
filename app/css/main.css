@@ -3273,6 +3273,7 @@ input.default-btn {
 }
 
 .about-main {
+  display: none;
   color: #fff;
   padding: 120px 0 98px;
   background-size: cover;
@@ -5224,15 +5225,16 @@ input.default-btn {
   position: absolute;
 }
 
-.main-slider__cont {
-  height: calc(100vh - 180px);
-}
-
 .main-slider__slide-img {
-  height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+@media (min-width: 1920px) {
+  .main-slider__slide-img {
+    max-height: calc(100vh - 180px);
+  }
 }
 
 .main-slider__slide-title {
@@ -6886,6 +6888,9 @@ input.default-btn {
   .btn--consultation {
     background: url("../img/ico-fase.png") no-repeat center right 15px, #31c5bd;
     border-radius: 0;
+  }
+  .main-slider__slide-title {
+    max-width: 100%;
   }
 }
 
