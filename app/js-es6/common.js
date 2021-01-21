@@ -11,6 +11,8 @@ var log = (str) => {
 	console.log(str)
 },
 
+
+
 loadScripts = () => {
 
 	window.sameSizes = _ => {
@@ -24,10 +26,10 @@ loadScripts = () => {
 		});
 
 		$(".desktop-table__head > table").width(widthSumm);
-	
+
 	};
 
-	sameSizes();
+	window.sameSizes();
 
 	$(".header-special__link").click(function(){
 		console.log(1)
@@ -298,7 +300,7 @@ loadScripts = () => {
 	$(".shop").clone().addClass("js__shop").appendTo(".mobile-menu");
 	$(".help__list").clone().addClass("js__help").appendTo(".mobile-menu");
 
-	var mapObj = new map();
+	var mapObj = new Map();
 
 	$(".city-area__item").hover(function(){
 		let $this = $(this);
@@ -313,4 +315,4 @@ loadScripts = () => {
 	
 }
 
-$(window).on("resize", sameSizes);
+$(window).on("resize", window.sameSizes);

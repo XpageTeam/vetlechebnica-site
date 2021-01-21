@@ -27,7 +27,7 @@ var log = function log(str) {
 		$(".desktop-table__head > table").width(widthSumm);
 	};
 
-	sameSizes();
+	window.sameSizes();
 
 	$(".header-special__link").click(function () {
 		console.log(1);
@@ -268,7 +268,7 @@ var log = function log(str) {
 	$(".shop").clone().addClass("js__shop").appendTo(".mobile-menu");
 	$(".help__list").clone().addClass("js__help").appendTo(".mobile-menu");
 
-	var mapObj = new map();
+	var mapObj = new Map();
 
 	$(".city-area__item").hover(function () {
 		var $this = $(this);
@@ -279,5 +279,5 @@ var log = function log(str) {
 	});
 };
 
-$(window).on("resize", sameSizes);
+$(window).on("resize", window.sameSizes);
 //# sourceMappingURL=common.js.map
